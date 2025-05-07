@@ -29,4 +29,18 @@ public class VerificationTokenService {
 	public VerificationToken findVerificationTokenByToken(String token) {
 		return verificationTokenRepository.findByToken(token);
 	}
+
+	@Transactional
+	public void update(User user, String token) {
+		VerificationToken verificationToken = verificationTokenRepository.findByUser(user);
+		verificationToken.setToken(token);
+
+		verificationTokenRepository.save(verificationToken);
+	}
+
+	// トークンの文字列で検索した結果を返す
+	public VerificationToken getVerificationToken(String token) {
+		return verificationTokenRepository.findByToken(token);
+	}
+
 }

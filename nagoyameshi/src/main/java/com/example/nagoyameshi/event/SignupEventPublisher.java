@@ -16,4 +16,9 @@ public class SignupEventPublisher {
 	public void publishSignupEvent(User user, String requestUrl) {
 		applicationEventPublisher.publishEvent(new SignupEvent(this, user, requestUrl));
 	}
+
+	public void publishPasswordResetEvent(User user, String url) {
+		// イベント発行処理
+	}
+
 }

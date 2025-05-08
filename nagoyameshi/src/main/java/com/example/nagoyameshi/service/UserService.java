@@ -54,6 +54,7 @@ public class UserService {
 		this.userRepository = userRepository;
 		this.roleRepository = roleRepository;
 		this.passwordEncoder = passwordEncoder;
+
 	}
 
 	@Transactional

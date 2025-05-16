@@ -168,4 +168,9 @@ public class UserService {
 		// 認証情報を更新する
 		SecurityContextHolder.getContext().setAuthentication(newAuthentication);
 	}
+
+
 }
+
+
+

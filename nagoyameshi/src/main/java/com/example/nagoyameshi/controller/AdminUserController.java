@@ -1,7 +1,5 @@
 package com.example.nagoyameshi.controller;
 
-import java.util.Optional;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort.Direction;
@@ -12,30 +10,29 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.nagoyameshi.entity.User;
-import com.example.nagoyameshi.service.UserService;
+import com.example.nagoyameshi.repository.UserRepository;
 
 @Controller
 @RequestMapping("/admin/users")
 public class AdminUserController {
-	private final UserService userService;
+	private final UserRepository userRepository;
 
-	public AdminUserController(UserService userService) {
-		this.userService = userService;
+	public AdminUserController(UserRepository userRepository) {
+		this.userRepository = userRepository;
 	}
 
 	@GetMapping
 	public String index(@RequestParam(name = "keyword", required = false) String keyword,
-			@PageableDefault(page = 0, size = 15, sort = "id", direction = Direction.ASC) Pageable pageable,
+			@PageableDefault(page = 0, size = 10, sort = "id", direction = Direction.ASC) Pageable pageable,
 			Model model) {
 		Page<User> userPage;
 
 		if (keyword != null && !keyword.isEmpty()) {
-			userPage = userService.findUsersByNameLikeOrFuriganaLike(keyword, keyword, pageable);
+			userPage = userRepository.findByNameLikeOrFuriganaLike("%" + keyword + "%", "%" + keyword + "%", pageable);
 		} else {
-			userPage = userService.findAllUsers(pageable);
+			userPage = userRepository.findAll(pageable);
 		}
 
 		model.addAttribute("userPage", userPage);
@@ -45,16 +42,9 @@ public class AdminUserController {
 	}
 
 	@GetMapping("/{id}")
-	public String show(@PathVariable(name = "id") Integer id, RedirectAttributes redirectAttributes, Model model) {
-		Optional<User> optionalUser = userService.findUserById(id);
+	public String show(@PathVariable(name = "id") Integer id, Model model) {
+		User user = userRepository.getReferenceById(id);
 
-		if (optionalUser.isEmpty()) {
-			redirectAttributes.addFlashAttribute("errorMessage", "ユーザーが存在しません。");
-
-			return "redirect:/admin/users";
-		}
-
-		User user = optionalUser.get();
 		model.addAttribute("user", user);
 
 		return "admin/users/show";

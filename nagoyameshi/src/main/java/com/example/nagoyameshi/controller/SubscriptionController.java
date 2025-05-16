@@ -54,6 +54,7 @@ public class SubscriptionController {
 				// stripeCustomerIdフィールドに顧客IDを保存する
 				userService.saveStripeCustomerId(user, customer.getId());
 			} catch (StripeException e) {
+				e.printStackTrace();
 				redirectAttributes.addFlashAttribute("errorMessage", "有料プランへの登録に失敗しました。再度お試しください。");
 
 				return "redirect:/";
@@ -127,7 +128,7 @@ public class SubscriptionController {
 			stripeService.detachPaymentMethodFromCustomer(currentDefaultPaymentMethodId);
 		} catch (StripeException e) {
 			redirectAttributes.addFlashAttribute("errorMessage", "お支払い方法の変更に失敗しました。再度お試しください。");
-
+			e.printStackTrace();
 			return "redirect:/";
 		}
 
@@ -160,7 +161,7 @@ public class SubscriptionController {
 			stripeService.detachPaymentMethodFromCustomer(defaultPaymentMethodId);
 		} catch (StripeException e) {
 			redirectAttributes.addFlashAttribute("errorMessage", "有料プランの解約に失敗しました。再度お試しください。");
-
+			e.printStackTrace();
 			return "redirect:/";
 		}
 

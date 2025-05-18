@@ -1,0 +1,777 @@
+2025-05-18T11:00:30.877202+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d670db08-5aed-1fb5-6500-1cab1bd2a513 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.241705+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=de8cc6fa-ad7f-d6c1-8f25-c434255823b3 fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.353648+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a9644695-ee5d-fc2f-1bef-480b290597de fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.438150+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b36475e6-97b6-7123-b817-69f74c0d9d1e fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.445292+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=25b0fc88-ce37-bf34-06d1-3bf4c5dd30dc fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.534762+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ddf7fb38-a53b-b74f-08df-31151cb0609a fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:31.631386+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b44af654-2b5c-f8a0-14f0-6437de4b75a1 fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:32.773831+00:00 app[web.1]: com.stripe.exception.InvalidRequestException: Invalid null ID found for url path formatting. This can be because your string ID argument to the API method is null, or the ID field in your stripe object instance is null. Please contact support@stripe.com on the latter case.
+2025-05-18T11:00:32.773976+00:00 app[web.1]: at com.stripe.net.ApiResource.urlEncodeId(ApiResource.java:119)
+2025-05-18T11:00:32.773984+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:633)
+2025-05-18T11:00:32.773991+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:622)
+2025-05-18T11:00:32.773998+00:00 app[web.1]: at com.example.nagoyameshi.service.StripeService.getDefaultPaymentMethod(StripeService.java:86)
+2025-05-18T11:00:32.774013+00:00 app[web.1]: at com.example.nagoyameshi.controller.SubscriptionController.edit(SubscriptionController.java:99)
+2025-05-18T11:00:32.774014+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-05-18T11:00:32.774028+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-05-18T11:00:32.774028+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+2025-05-18T11:00:32.774041+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+2025-05-18T11:00:32.774042+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2025-05-18T11:00:32.774053+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+2025-05-18T11:00:32.774054+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+2025-05-18T11:00:32.774065+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2025-05-18T11:00:32.774074+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-05-18T11:00:32.774075+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2025-05-18T11:00:32.774085+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2025-05-18T11:00:32.774089+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+2025-05-18T11:00:32.774099+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+2025-05-18T11:00:32.774100+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+2025-05-18T11:00:32.774111+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+2025-05-18T11:00:32.774119+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+2025-05-18T11:00:32.774119+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774130+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-05-18T11:00:32.774131+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:00:32.774142+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774150+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+2025-05-18T11:00:32.774151+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+2025-05-18T11:00:32.774162+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+2025-05-18T11:00:32.774170+00:00 app[web.1]: at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+2025-05-18T11:00:32.774171+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774182+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2025-05-18T11:00:32.774183+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2025-05-18T11:00:32.774194+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774202+00:00 app[web.1]: at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2025-05-18T11:00:32.774203+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774214+00:00 app[web.1]: at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+2025-05-18T11:00:32.774215+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774226+00:00 app[web.1]: at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+2025-05-18T11:00:32.774227+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774238+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2025-05-18T11:00:32.774239+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+2025-05-18T11:00:32.774250+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774253+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+2025-05-18T11:00:32.774263+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+2025-05-18T11:00:32.774264+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774275+00:00 app[web.1]: at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+2025-05-18T11:00:32.774283+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774284+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774295+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+2025-05-18T11:00:32.774318+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+2025-05-18T11:00:32.774326+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774334+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774335+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+2025-05-18T11:00:32.774346+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+2025-05-18T11:00:32.774347+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774359+00:00 app[web.1]: at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+2025-05-18T11:00:32.774367+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774368+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774379+00:00 app[web.1]: at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+2025-05-18T11:00:32.774388+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774389+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:00:32.774399+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+2025-05-18T11:00:32.774407+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+2025-05-18T11:00:32.774421+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:00:32.774429+00:00 app[web.1]: at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+2025-05-18T11:00:32.774437+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:00:32.774438+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+2025-05-18T11:00:32.774450+00:00 app[web.1]: at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)        
+2025-05-18T11:00:32.774451+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+2025-05-18T11:00:32.774461+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+2025-05-18T11:00:32.774462+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:00:32.774473+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774474+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2025-05-18T11:00:32.774485+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774486+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:00:32.774496+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774497+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2025-05-18T11:00:32.774508+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774509+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:00:32.774520+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774521+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2025-05-18T11:00:32.774531+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:00:32.774532+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:00:32.774543+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:00:32.774551+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+2025-05-18T11:00:32.774552+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+2025-05-18T11:00:32.774562+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+2025-05-18T11:00:32.774564+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+2025-05-18T11:00:32.774575+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+2025-05-18T11:00:32.774576+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2025-05-18T11:00:32.774587+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:732)
+2025-05-18T11:00:32.774588+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+2025-05-18T11:00:32.774598+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+2025-05-18T11:00:32.774606+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+2025-05-18T11:00:32.774607+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+2025-05-18T11:00:32.774618+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+2025-05-18T11:00:32.774626+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+2025-05-18T11:00:32.774635+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+2025-05-18T11:00:32.774721+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+2025-05-18T11:00:32.774741+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+2025-05-18T11:00:32.774760+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18T11:00:32.775733+00:00 heroku[router]: at=info method=GET path="/subscription/edit" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a2c1b44c-d0e3-4aa8-705c-17e2df755199 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.377049+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=425d012f-1410-661d-8d00-9ea1fffad4a9 fwd="36.12.128.190" dyno=web.1 connect=0ms service=405ms status=200 bytes=33993 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.602387+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=79456a2e-31c8-8a7f-d764-e9f72db35173 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.606844+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=6b62669e-5b4c-a3b3-e539-a86567e6e48b fwd="36.12.128.190" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.608594+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b6dbb8c6-db20-e0b6-99e6-6d3885fa5b3b fwd="36.12.128.190" dyno=web.1 connect=0ms service=8ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.608698+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e9509b55-e746-a3a0-41c5-8d39d410f80b fwd="36.12.128.190" dyno=web.1 connect=0ms service=7ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.610066+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=5648e2b3-0c39-a1af-6085-2929e308e798 fwd="36.12.128.190" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.611227+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=dc913cea-77b3-c8e8-6987-08a07cc8b395 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.782814+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a105f6db-c7c6-9100-36ec-0ef378ba069b fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.797528+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=f0893c3d-1a0e-4f7d-b31e-c101e6f44d7d fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.806230+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e5b2b08a-ecb0-53ba-c4cb-bc26b7096907 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:33.959306+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d177e2a6-26d9-ca89-3b43-c42cce64996b fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.006416+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2309546e-c256-b960-f62d-3a0f8dbc5087 fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.135732+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e9642c43-134e-e17d-cdb2-a6fe47c6704f fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.316589+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=48d2207f-0c4b-e106-990e-d7a4ef94a15c fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.381150+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7b8d7b90-40be-845a-f8b1-b2aba8d2d1b2 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.403100+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=6f535599-7b12-39d4-1c4b-02f37e137403 fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:00:34.493031+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=aa0415ea-a2ed-6511-3545-d42eca684a8b fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.275495+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d2270f1e-0423-8e6b-7169-2b8b4870585c fwd="114.16.204.20" dyno=web.1 connect=0ms service=420ms status=200 bytes=32377 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.505120+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a23432a6-49f4-0b73-e694-285b750867ff fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.664743+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=93144fcf-1d07-1ab3-1445-e9b406b3579f fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.709686+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=5c9e89c4-ccf8-25e3-defe-7243d1dfaa0f fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.856879+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9cf89d95-5e2e-633f-150c-726ee2818e2e fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:22.947663+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=704a62b1-9f3d-dd63-85ec-51f57c3d2658 fwd="114.16.204.20" dyno=web.1 connect=0ms service=49ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.051671+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1d56e1b6-ebf4-9b0a-078f-989866d2182d fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.060369+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d7a0ca90-4b25-52a0-adc7-6f89c52e7f12 fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.077181+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e15f2145-bb98-0c96-e83f-fc846ddc2f13 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.089454+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a31003ee-a9f8-0ca9-964b-1364133a9f87 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.260928+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e6799c74-11c2-aeb0-5fe9-becdc7285c07 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.678752+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ec61ff8c-7399-5703-fdc8-86519dfac60f fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.848419+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=edf1f210-e8c3-716a-baab-75148cf30118 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:23.887908+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a33544e1-044b-6135-cfc2-062fdd9353a8 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:24.053867+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=37efe32d-662a-2be2-c6ce-7a63aaa71700 fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:31.416981+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=512af37e-d206-7c69-8f1c-4d79e76ed55a fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:31.651586+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4402edcf-f88a-c1e5-14c8-d49ff93c8d35 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:31.654401+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=5e31c09d-8f3e-c67e-3d7d-25c419d879d6 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:36.735698+00:00 heroku[router]: at=info method=POST path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ca7204e4-84ae-5277-b0ad-fff279ceccdc fwd="114.16.204.20" dyno=web.1 connect=0ms service=78ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.356387+00:00 heroku[router]: at=info method=GET path="/?loggedIn" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=07059942-b1dc-58af-b8b1-c8fd7f92cb20 fwd="114.16.204.20" dyno=web.1 connect=0ms service=420ms status=200 bytes=33941 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.588684+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b45db5a2-da96-40c2-6e1f-c0b7a5e4e13e fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.592967+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d76c0c59-e1d7-1fc4-688c-ade9feba4a6a fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.764957+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7deca936-3fdd-1fc9-84a2-8d1e8ecc137d fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.766733+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=699016be-a0d1-749d-81ad-b29c0bfdb4b9 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.767230+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=20ade91b-0eb9-50c6-93fe-1662c617cdf5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.783640+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d01f9d57-1830-b0c6-88f4-17ca8dab4796 fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.791931+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2fb3c4d8-1201-5b9f-42c0-c3e315b56d2d fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:37.975431+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b8bce281-7084-ece3-0dc1-29cd7a289d7c fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:38.136687+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2af5bc03-f938-d56c-cadf-b0e93fb2591b fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:38.384836+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=84d7a772-cc2c-a465-616a-52840478fab0 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:38.553399+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=86f3894f-7fab-ce5a-3043-c37d7ce49670 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:38.596520+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a480fc9b-1fcb-6a34-a428-bff063299935 fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=2ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:38.800052+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=baa339de-66f0-03cd-25e1-5a7798eac665 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.002781+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e834dde4-9f9d-2f7e-c37d-109f8ba22eb3 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.205345+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=526a3ca6-5d99-53bd-12bb-e5655730ab81 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.307232+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=12d7e15e-d21c-adc3-fb7d-59becb94374c fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.346366+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=36b8ad05-8580-ffa2-3d80-4b570cbcb276 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.415298+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=19e60cc7-b7ad-2af3-3f76-9d26324cdab3 fwd="114.16.204.20" dyno=web.1 connect=0ms service=8ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:27:39.501567+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=50feebfb-b280-240f-5238-6d0258733559 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:02.758252+00:00 app[web.1]: com.stripe.exception.InvalidRequestException: Invalid null ID found for url path formatting. This can be because your string ID argument to the API method is null, or the ID field in your stripe object instance is null. Please contact support@stripe.com on the latter case.
+2025-05-18T11:28:02.758427+00:00 app[web.1]: at com.stripe.net.ApiResource.urlEncodeId(ApiResource.java:119)
+2025-05-18T11:28:02.758428+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:633)
+2025-05-18T11:28:02.758434+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:622)
+2025-05-18T11:28:02.758448+00:00 app[web.1]: at com.example.nagoyameshi.service.StripeService.getDefaultPaymentMethod(StripeService.java:86)
+2025-05-18T11:28:02.758448+00:00 app[web.1]: at com.example.nagoyameshi.controller.SubscriptionController.edit(SubscriptionController.java:99)
+2025-05-18T11:28:02.758460+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-05-18T11:28:02.758504+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-05-18T11:28:02.758504+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+2025-05-18T11:28:02.758518+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+2025-05-18T11:28:02.758519+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2025-05-18T11:28:02.758545+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+2025-05-18T11:28:02.758546+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+2025-05-18T11:28:02.758558+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2025-05-18T11:28:02.758560+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-05-18T11:28:02.758576+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2025-05-18T11:28:02.758577+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2025-05-18T11:28:02.758578+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+2025-05-18T11:28:02.758590+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+2025-05-18T11:28:02.758591+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+2025-05-18T11:28:02.758604+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+2025-05-18T11:28:02.758604+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+2025-05-18T11:28:02.758620+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.758620+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-05-18T11:28:02.758636+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:28:02.758636+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.758638+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+2025-05-18T11:28:02.758656+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+2025-05-18T11:28:02.758656+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+2025-05-18T11:28:02.758660+00:00 app[web.1]: at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+2025-05-18T11:28:02.758672+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758682+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2025-05-18T11:28:02.758686+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2025-05-18T11:28:02.758698+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758709+00:00 app[web.1]: at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2025-05-18T11:28:02.758713+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758725+00:00 app[web.1]: at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+2025-05-18T11:28:02.758729+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758741+00:00 app[web.1]: at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+2025-05-18T11:28:02.758751+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758760+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2025-05-18T11:28:02.758771+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+2025-05-18T11:28:02.758775+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758787+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+2025-05-18T11:28:02.758797+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+2025-05-18T11:28:02.758807+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758817+00:00 app[web.1]: at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+2025-05-18T11:28:02.758827+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.758831+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758843+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+2025-05-18T11:28:02.758853+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+2025-05-18T11:28:02.758863+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.758867+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758879+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+2025-05-18T11:28:02.758889+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+2025-05-18T11:28:02.758894+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758906+00:00 app[web.1]: at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+2025-05-18T11:28:02.758917+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.758943+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758953+00:00 app[web.1]: at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+2025-05-18T11:28:02.758957+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.758969+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:28:02.758979+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+2025-05-18T11:28:02.758988+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+2025-05-18T11:28:02.758998+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:28:02.759008+00:00 app[web.1]: at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+2025-05-18T11:28:02.759019+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:28:02.759023+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+2025-05-18T11:28:02.759036+00:00 app[web.1]: at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)        
+2025-05-18T11:28:02.759040+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+2025-05-18T11:28:02.759051+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+2025-05-18T11:28:02.759056+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:28:02.759068+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.759072+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2025-05-18T11:28:02.759084+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.759088+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:28:02.759099+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.759110+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2025-05-18T11:28:02.759119+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.759124+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:28:02.759136+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.759145+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2025-05-18T11:28:02.759155+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:28:02.759165+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:28:02.759174+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:28:02.759184+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+2025-05-18T11:28:02.759188+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+2025-05-18T11:28:02.759200+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+2025-05-18T11:28:02.759210+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+2025-05-18T11:28:02.759220+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+2025-05-18T11:28:02.759223+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2025-05-18T11:28:02.759235+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:732)
+2025-05-18T11:28:02.759244+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+2025-05-18T11:28:02.759254+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+2025-05-18T11:28:02.759263+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+2025-05-18T11:28:02.759268+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+2025-05-18T11:28:02.759279+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+2025-05-18T11:28:02.759283+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+2025-05-18T11:28:02.759295+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+2025-05-18T11:28:02.759305+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+2025-05-18T11:28:02.759314+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+2025-05-18T11:28:02.759324+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18T11:28:02.760256+00:00 heroku[router]: at=info method=GET path="/subscription/edit" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2a892d0e-68b6-c040-e92f-ff491ca5511d fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.395810+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=de214c27-f8d2-6885-b739-ea53179ee6bf fwd="114.16.204.20" dyno=web.1 connect=0ms service=426ms status=200 bytes=33993 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.836096+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7a3e1d38-d605-61d4-1d25-57c17d675f77 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.836594+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=80d6e0da-d455-9f7b-70b3-2166ae697d7c fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.839007+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ba268f98-54f1-26b1-ae05-41ad540d11d3 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.842755+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=000ca468-0eca-6f95-597d-b8d38e7bd582 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.851019+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=29845813-3f1a-92b2-5b8f-f1b0ac48f575 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:03.851856+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=62a09445-257b-4702-d940-f72269f98a22 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.030625+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=32108303-d2e1-680b-5595-31483c0a78f5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.037772+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=472930ba-ba1e-4e4d-1024-90248204ed49 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.045454+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=19816949-ebe6-2eff-7c05-26cdccbe1cde fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.222326+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ea0f141d-ebbe-1fa0-1199-b5257073be9a fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.663214+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=92b33a5b-129f-eb5f-a290-5b1b713c08b7 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:04.787878+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ed459762-ff0c-610f-de27-88ca2f01e7f1 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:05.032992+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2f0973df-0a82-a620-f989-d59ed5eb44f0 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:05.438019+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ee693384-3317-1c33-8930-529edb04ed9f fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:05.640549+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=505e4737-3987-ba66-2dbc-b75385604419 fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:28:05.816973+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=99df67f0-3f9d-5e4b-5455-a738234c6d3e fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:49.669297+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b0b73787-e538-f731-6d81-3ac0212a537f fwd="36.12.128.190" dyno=web.1 connect=0ms service=414ms status=200 bytes=32377 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.054479+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=6da05c95-83ac-2517-70c9-24fddd990c10 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.064850+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e973d9cb-ee8f-bc6c-22c2-0c03acbf216b fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.238461+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=aa65bac4-fdd9-8656-622b-2dc3ef232ac2 fwd="36.12.128.190" dyno=web.1 connect=0ms service=9ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.275848+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c52a4c9f-3de3-8cec-5218-258172b18220 fwd="36.12.128.190" dyno=web.1 connect=0ms service=8ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.439250+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=63653164-d885-07de-cbcb-c71176afc920 fwd="36.12.128.190" dyno=web.1
+ connect=0ms service=2ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.450104+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ddabf7e9-f288-f6ad-b193-0712feafc807 fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.450757+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=cdc101c7-984d-ce2a-3701-2d34247892e5 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.453375+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3f7a0768-513c-ec4d-54ba-bbe503a7eb30 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.639357+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=624a3279-6f49-c84c-dad8-d961877b3e70 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:50.649567+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0f17dae7-df77-c1ce-500c-a6a08af90751 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.015687+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ec2c349c-4b1f-234e-36b7-b88e79433b54 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.195328+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b552804e-c9c7-58a3-e826-96271765deab fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.204704+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3df8b522-4a1e-d045-520b-c14b1a8cef1c fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.212201+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0da52432-3ea6-7355-aec0-e23e76a9261c fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.285296+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e8a709aa-0c0c-e294-0b1a-7ae125c8205d fwd="36.12.128.190" dyno=web.1 connect=0ms service=8ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:51.960016+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7652c36b-dd08-28b0-ba39-d224230777d8 fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:52.198594+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ff4909bf-2bee-0486-2faf-b6042676bc68 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:41:52.198804+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=541276e1-c5d3-bb34-803c-aab4b7ba0981 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:17.230786+00:00 heroku[router]: at=info method=POST path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=145ca714-3d52-be9b-90c7-2b136b55057d fwd="36.12.128.190" dyno=web.1 connect=0ms service=75ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:17.836748+00:00 heroku[router]: at=info method=GET path="/?loggedIn" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=742d0a91-317e-eb4e-72f0-6ec9b5021d4e fwd="36.12.128.190" dyno=web.1 connect=0ms service=403ms status=200 bytes=33941 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.070600+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7f7378b9-0131-fd5c-8d07-64beea0e7aa4 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.079462+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=60373164-acc2-a386-6342-31f5a8be4b68 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.221740+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=782887fd-9017-83c2-a442-221c937df6bf fwd="36.12.128.190" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.228492+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b539e5de-d45d-832e-32a6-4e6b59b70833 fwd="36.12.128.190" dyno=web.1 connect=0ms service=8ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.233081+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a22ecd3f-e4d8-edec-ad4e-48154998a33e fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.237651+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=45829be4-049d-0845-f095-f0bc553beabc fwd="36.12.128.190" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.265101+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=fa4c89c7-d66b-8600-7b3f-cbc61c24b977 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.279889+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=6086e2ce-501d-6b32-492b-0df287f02010 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.408361+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e2a772b8-e723-a3af-eca5-184a75d1be5e fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.462929+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e208fa2e-3b81-b5ab-f015-543d284d0af5 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.839551+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=23d618fa-e823-0d74-4c7e-c18e66a7bd23 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:18.954253+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=08f28575-1a53-e10d-5d3d-423fac23bdb3 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:19.041316+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=861f0dbe-8b43-37b3-1884-d77264654b37 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:19.146781+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=725add8a-e26c-bbee-6284-f3ae4a2eaa56 fwd="36.12.128.190" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:25.132074+00:00 app[web.1]: com.stripe.exception.InvalidRequestException: Invalid null ID found for url path formatting. This can be because your string ID argument to the API method is null, or the ID field in your stripe object instance is null. Please contact support@stripe.com on the latter case.
+2025-05-18T11:42:25.132248+00:00 app[web.1]: at com.stripe.net.ApiResource.urlEncodeId(ApiResource.java:119)
+2025-05-18T11:42:25.132249+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:633)
+2025-05-18T11:42:25.132251+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:622)
+2025-05-18T11:42:25.132271+00:00 app[web.1]: at com.example.nagoyameshi.service.StripeService.getDefaultPaymentMethod(StripeService.java:86)
+2025-05-18T11:42:25.132271+00:00 app[web.1]: at com.example.nagoyameshi.controller.SubscriptionController.edit(SubscriptionController.java:99)
+2025-05-18T11:42:25.132294+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-05-18T11:42:25.132294+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-05-18T11:42:25.132304+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+2025-05-18T11:42:25.132305+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+2025-05-18T11:42:25.132315+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2025-05-18T11:42:25.132317+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+2025-05-18T11:42:25.132318+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+2025-05-18T11:42:25.132328+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2025-05-18T11:42:25.132329+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-05-18T11:42:25.132338+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2025-05-18T11:42:25.132339+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2025-05-18T11:42:25.132348+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+2025-05-18T11:42:25.132349+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+2025-05-18T11:42:25.132358+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+2025-05-18T11:42:25.132358+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+2025-05-18T11:42:25.132368+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+2025-05-18T11:42:25.132368+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132403+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-05-18T11:42:25.132403+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:42:25.132419+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132420+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+2025-05-18T11:42:25.132430+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+2025-05-18T11:42:25.132430+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+2025-05-18T11:42:25.132440+00:00 app[web.1]: at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+2025-05-18T11:42:25.132440+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132454+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2025-05-18T11:42:25.132454+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2025-05-18T11:42:25.132455+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132467+00:00 app[web.1]: at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2025-05-18T11:42:25.132469+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132482+00:00 app[web.1]: at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+2025-05-18T11:42:25.132492+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132493+00:00 app[web.1]: at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+2025-05-18T11:42:25.132506+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132508+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2025-05-18T11:42:25.132520+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+2025-05-18T11:42:25.132524+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132535+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+2025-05-18T11:42:25.132536+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+2025-05-18T11:42:25.132562+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132564+00:00 app[web.1]: at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+2025-05-18T11:42:25.132575+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132585+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132589+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+2025-05-18T11:42:25.132599+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+2025-05-18T11:42:25.132600+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132612+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132613+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+2025-05-18T11:42:25.132625+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+2025-05-18T11:42:25.132626+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132640+00:00 app[web.1]: at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+2025-05-18T11:42:25.132641+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132653+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132663+00:00 app[web.1]: at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+2025-05-18T11:42:25.132664+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132676+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:42:25.132680+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+2025-05-18T11:42:25.132691+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+2025-05-18T11:42:25.132692+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:42:25.132705+00:00 app[web.1]: at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+2025-05-18T11:42:25.132706+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:42:25.132718+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+2025-05-18T11:42:25.132729+00:00 app[web.1]: at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)        
+2025-05-18T11:42:25.132731+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+2025-05-18T11:42:25.132742+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+2025-05-18T11:42:25.132752+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:42:25.132762+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132772+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2025-05-18T11:42:25.132782+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132783+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:42:25.132795+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132805+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2025-05-18T11:42:25.132807+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132818+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:42:25.132823+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132833+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2025-05-18T11:42:25.132834+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:42:25.132846+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:42:25.132851+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:42:25.132862+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+2025-05-18T11:42:25.132863+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+2025-05-18T11:42:25.132876+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+2025-05-18T11:42:25.132880+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+2025-05-18T11:42:25.132892+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+2025-05-18T11:42:25.132894+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2025-05-18T11:42:25.132905+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:732)
+2025-05-18T11:42:25.132915+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+2025-05-18T11:42:25.132916+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+2025-05-18T11:42:25.132929+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+2025-05-18T11:42:25.132930+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+2025-05-18T11:42:25.132942+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+2025-05-18T11:42:25.132946+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+2025-05-18T11:42:25.132958+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+2025-05-18T11:42:25.132961+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+2025-05-18T11:42:25.132973+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+2025-05-18T11:42:25.132977+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18T11:42:25.134050+00:00 heroku[router]: at=info method=GET path="/subscription/edit" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0ceae24d-c4ba-6efa-cf40-e8014f600035 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:25.733785+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e440b458-f423-b9e4-1770-927908b80447 fwd="36.12.128.190" dyno=web.1 connect=0ms service=414ms status=200 bytes=33993 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.143829+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4e626a67-1138-0147-6736-ed27a6da9aec fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.150722+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=80afdfa8-107b-801a-7776-c8e92c00b51f fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.152470+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=838fc9eb-042a-2006-f598-e5daa2539a99 fwd="36.12.128.190" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.156822+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2a92ecc6-bf7a-9646-7aed-59c156d40d9c fwd="36.12.128.190" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.160277+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a1a9dd6f-51f5-51d8-0999-3a2c03996ccb fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.163939+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7595f399-90d5-2658-e347-b9badfd1d870 fwd="36.12.128.190" dyno=web.1 connect=0ms service=9ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.331718+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=dc0b74ea-e8e5-8b1b-bb64-f68a4912f6d6 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.337939+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=002d62ce-3d77-e8f4-c0e1-983113d13c20 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.346810+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d0f8d5c5-2b86-695e-ee9b-b8b90aaee1e2 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.525974+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a1556c63-558c-9266-0460-26fa3588e4a1 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.701728+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e5cffb1d-5f2c-9847-1058-edaf873cc8cf fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:26.904978+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c58b089e-bb93-d058-cd0c-b16ca6362792 fwd="36.12.128.190" dyno=web.1 connect=0ms service=4ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:27.081795+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a15e7aa1-46ec-f90b-fb11-d90b0b602de9 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:27.261353+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=824a5b1a-9eb9-17ec-53d5-a1f7f4f8b227 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:27.277337+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e6132e58-b82e-1471-4f7c-41dda0add82a fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:42:27.281947+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9192dea2-1ec9-be9e-8eb5-9f3c4510c175 fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:50.779558+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=109a18ae-f604-5dcd-ddc8-822087750775 fwd="114.16.204.20" dyno=web.1 connect=0ms service=391ms status=200 bytes=33718 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.216788+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9516138e-b7c6-db94-3341-f640a40cfd37 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.216828+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d5131d6f-909e-0038-eb3c-331d1abf7764 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.409344+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=cb4820b0-913e-a79d-5c17-e65e082f3f98 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.471688+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ca4c147e-8ba7-9dc3-9a64-de294f63a1aa fwd="114.16.204.20" dyno=web.1 connect=0ms service=48ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.597286+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ae9a243c-2944-d1d6-35c6-243b9e71b212 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.612268+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0e833ce3-5f21-47b7-df69-18a0e988eee5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.619824+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c6a2d058-c9bf-6edb-6ceb-6673f5fac68d fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.632352+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e57e0dbb-88db-a7e7-0e15-ee96f87dba1e fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.813316+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ee6f1f41-0400-e9cf-c216-3f912383c9ba fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:51.820400+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=8a4219bd-5df0-bf76-5536-2bceb58d56d6 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:52.264473+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=aa9b86bb-5a85-cf99-be06-48cbab6be0a2 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:52.453530+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=922ba5ba-5bbd-436c-7a1c-a97acc18546e fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:52.641256+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=5af17ca2-41f5-fd48-447a-66e18bcf98a0 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:52.652709+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=31c7abc3-a027-c779-dc01-a52a51930ee5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:52.857442+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=883b299f-2d47-6270-086a-c9d2f7ff6439 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:53.331332+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1405fdb0-1560-6133-a820-0d2e139d0147 fwd="114.16.204.20" dyno=web.1 connect=0ms service=100ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:54.465864+00:00 heroku[router]: at=info method=POST path="/logout" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9fe2764e-839b-d350-595e-e403344a1d2b fwd="114.16.204.20" dyno=web.1 connect=0ms
+ service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.067701+00:00 heroku[router]: at=info method=GET path="/?loggedOut" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=32584c8b-c480-fcba-86ed-7165117725bf fwd="114.16.204.20" dyno=web.1 connect=0ms service=392ms status=200 bytes=32603 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.308974+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a69cd56e-1c25-0894-ed37-a31a516f4b75 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.309155+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3baf1dbb-c2eb-0e1f-40b0-42f6583c14b0 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.315860+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4bf29223-9c1f-cd6e-7699-66502de765c6 fwd="114.16.204.20" dyno=web.1 connect=0ms service=9ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.319320+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2b3fddf4-e7ed-b8e4-f635-2a69ebdfce66 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.320704+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d75dae18-33f6-8d7d-5f33-c001a6c42940 fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.499462+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=821fe317-ecf9-30d2-072b-0e583b40f61e fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.517955+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=15f6ff27-9424-81ef-676c-1758bc13fcd9 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.688255+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=f53e7690-0f9d-cf23-76e5-58b0aa0927ba fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.726164+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4292e134-0338-546a-7ad4-c2c8da8f8f5f fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:55.939990+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=cf7f7282-6e1e-c1a9-0ccd-b274198dc8be fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.062447+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d19411bf-4992-b9bc-3993-b4aa445a6ce2 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.252511+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a79d64e5-7532-77d4-a9cd-ef1647780cc5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.307108+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7a1b2c49-cd15-eac2-e322-820c462425ed fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.445394+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1b7de161-1da8-2ef0-2966-908a0184f346 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.510354+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=dda4ce74-947f-a802-c36d-b13e38637ef6 fwd="114.16.204.20" dyno=web.1 connect=0ms service=7ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.683662+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=275baec5-2daa-e9f7-0a35-d1fcccf6d7ef fwd="114.16.204.20" dyno=web.1 connect=0ms service=50ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:56.989247+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c230d9e6-61a5-6ffb-ad2a-b3a12a847f12 fwd="114.16.204.20" dyno=web.1 connect=0ms service=4ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:57.227224+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9dd43c06-c3dc-3884-1a6f-c408f83dde71 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:57.437299+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2f643b8a-c5b9-24c4-c9dd-496d04596c7a fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:59.341850+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a55f9d32-c5a1-56ba-b2a4-5596673f3d31 fwd="114.16.204.20" dyno=web.1 connect=0ms service=4ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:59.556879+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c83327c3-922d-3c14-7997-4d855bb2661b fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:44:59.793642+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=15a03320-0b99-91e4-13f1-6c9b52406b4e fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:00.007201+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0a428feb-1381-5a6b-ef89-308b5a3ffa7e fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:01.422273+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1a27e7aa-eb3d-e377-8bf5-d9a4ae18607b fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:01.634751+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=44d53c82-5e0a-10be-d4b0-d048f53dd481 fwd="114.16.204.20" dyno=web.1 connect=0ms service=4ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:01.870469+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e75991d1-92bd-2523-5ccb-6b1e75c01a68 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:01.871500+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=82fef4f1-645e-ae45-0dfe-808112c83d07 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:03.078415+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9b718fa4-7050-18cd-665c-0fc7cf80b14e fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:03.296687+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=872d9ac5-9b32-d3b7-2a5b-e49f4ba47efc fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:03.525531+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3ed77b10-967b-4786-b254-dfccf07f5624 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:03.528202+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=99d71a8d-501a-2881-deba-87f23e707366 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.075564+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b7aebf43-bac2-ef04-e000-67babbed69f0 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.290940+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0f15b5a6-bb07-c8b2-2552-39928e168555 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.333815+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3cdeb6fb-b53c-7347-19df-b9a5028afce5 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.540586+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ae37e491-ba9f-3644-5580-106ecca68b14 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.761273+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3ac7d0d9-4f1a-1f9c-9406-8d777ef9f1f4 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:04.765161+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b3dafbd6-30d9-3da4-5669-5bbc090d5ce4 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:05.378266+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=257ea1c1-0517-5458-9af5-a7a8f1893d6d fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:05.570499+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e46ff93b-dfdd-d87d-9733-fc38f81ac273 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:05.950435+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0fa2c678-e77e-244c-aaa2-32e4f53a9593 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:06.138484+00:00 heroku[router]: at=info method=GET path="/password/sendmail" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=93dc4864-93e0-5abb-fc5b-24ec5925e901 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:06.338025+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=daec3298-d281-a81a-d203-d82112e4d124 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:06.559220+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=3c33e2aa-5d5b-9dd2-cfd5-efbcca68ea50 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:45:06.566523+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=085761a5-db75-a9bf-50db-eeaab7e1420f fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:42.425853+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=7ddad06b-5434-4a53-0a5a-3dce046ce574 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:52.966696+00:00 app[web.1]: com.stripe.exception.InvalidRequestException: Invalid null ID found for url path formatting. This can be because your string ID argument to the API method is null, or the ID field in your stripe object instance is null. Please contact support@stripe.com on the latter case.
+2025-05-18T11:46:52.966887+00:00 app[web.1]: at com.stripe.net.ApiResource.urlEncodeId(ApiResource.java:119)
+2025-05-18T11:46:52.966891+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:633)
+2025-05-18T11:46:52.966892+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:622)
+2025-05-18T11:46:52.966901+00:00 app[web.1]: at com.example.nagoyameshi.service.StripeService.getDefaultPaymentMethod(StripeService.java:86)
+2025-05-18T11:46:52.966901+00:00 app[web.1]: at com.example.nagoyameshi.controller.SubscriptionController.edit(SubscriptionController.java:99)
+2025-05-18T11:46:52.966903+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-05-18T11:46:52.966904+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-05-18T11:46:52.966912+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+2025-05-18T11:46:52.966912+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+2025-05-18T11:46:52.966915+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2025-05-18T11:46:52.966916+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+2025-05-18T11:46:52.966918+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+2025-05-18T11:46:52.966919+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2025-05-18T11:46:52.966931+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-05-18T11:46:52.966932+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2025-05-18T11:46:52.966932+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2025-05-18T11:46:52.966933+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+2025-05-18T11:46:52.966935+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+2025-05-18T11:46:52.966945+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+2025-05-18T11:46:52.966945+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+2025-05-18T11:46:52.966950+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+2025-05-18T11:46:52.966960+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.966960+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-05-18T11:46:52.966960+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:46:52.966978+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.966979+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+2025-05-18T11:46:52.966979+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+2025-05-18T11:46:52.966981+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+2025-05-18T11:46:52.966991+00:00 app[web.1]: at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+2025-05-18T11:46:52.966991+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.966991+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2025-05-18T11:46:52.966993+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2025-05-18T11:46:52.966994+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967004+00:00 app[web.1]: at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2025-05-18T11:46:52.967004+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967006+00:00 app[web.1]: at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+2025-05-18T11:46:52.967007+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967016+00:00 app[web.1]: at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+2025-05-18T11:46:52.967016+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967018+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2025-05-18T11:46:52.967028+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+2025-05-18T11:46:52.967028+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967033+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+2025-05-18T11:46:52.967045+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+2025-05-18T11:46:52.967045+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967045+00:00 app[web.1]: at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+2025-05-18T11:46:52.967046+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967055+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967055+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+2025-05-18T11:46:52.967055+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+2025-05-18T11:46:52.967056+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967065+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967066+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+2025-05-18T11:46:52.967067+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+2025-05-18T11:46:52.967067+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967076+00:00 app[web.1]: at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+2025-05-18T11:46:52.967076+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967077+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967080+00:00 app[web.1]: at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+2025-05-18T11:46:52.967081+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967089+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T11:46:52.967089+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+2025-05-18T11:46:52.967090+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+2025-05-18T11:46:52.967098+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:46:52.967099+00:00 app[web.1]: at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+2025-05-18T11:46:52.967109+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T11:46:52.967110+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+2025-05-18T11:46:52.967119+00:00 app[web.1]: at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)        
+2025-05-18T11:46:52.967119+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+2025-05-18T11:46:52.967120+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+2025-05-18T11:46:52.967121+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:46:52.967129+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.967129+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2025-05-18T11:46:52.967130+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967138+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:46:52.967138+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.967139+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2025-05-18T11:46:52.967147+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967147+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:46:52.967147+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.967151+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2025-05-18T11:46:52.967151+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T11:46:52.967160+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T11:46:52.967160+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T11:46:52.967161+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+2025-05-18T11:46:52.967169+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+2025-05-18T11:46:52.967169+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+2025-05-18T11:46:52.967177+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+2025-05-18T11:46:52.967178+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+2025-05-18T11:46:52.967187+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2025-05-18T11:46:52.967188+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:732)
+2025-05-18T11:46:52.967196+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+2025-05-18T11:46:52.967196+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+2025-05-18T11:46:52.967197+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+2025-05-18T11:46:52.967205+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+2025-05-18T11:46:52.967206+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+2025-05-18T11:46:52.967207+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+2025-05-18T11:46:52.967215+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+2025-05-18T11:46:52.967215+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+2025-05-18T11:46:52.967216+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+2025-05-18T11:46:52.967224+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18T11:46:52.968084+00:00 heroku[router]: at=info method=GET path="/subscription/edit" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=576bac09-5575-2732-77c6-df92b1075091 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:53.548162+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1da9de7c-ba4d-b0c4-e83f-205af9532388 fwd="36.12.128.190" dyno=web.1 connect=0ms service=392ms status=200 bytes=33993 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:53.979775+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=03a52030-2cbb-8592-aa00-a73250384059 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.006208+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=88c18c6c-8948-6432-6766-06c07158c4e0 fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.171132+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=87e385f9-8937-4313-78f6-2242c4debe33 fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.209685+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=f2cfd2a5-e57c-30aa-a17d-581c4720df41 fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.326511+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4c707912-fda8-a7b5-8a4c-8e9c72155c0c fwd="36.12.128.190" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.341842+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d4ff1d1d-fbc8-eaf1-ef2f-5eed85f6b33e fwd="36.12.128.190" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.358834+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ac9febec-8f82-e2e3-4d79-5b5166df3fce fwd="36.12.128.190" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.378153+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c8ea6c48-9bea-9fbd-0c44-fcd574fd2aea fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.529184+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=46364e06-7683-fd1c-f4ab-97ee6a6ddb2f fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.548066+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=91f988f3-1383-9417-cfc4-344f4684a542 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:54.946392+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1b838584-2742-3c21-9643-b1783c677f30 fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:55.055658+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e3797ed6-c171-d99e-be9f-21f496276cc5 fwd="36.12.128.190" dyno=web.1 connect=0ms service=2ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:55.101615+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d5c413fd-661e-64fc-5f86-c5499aeb1b4d fwd="36.12.128.190" dyno=web.1 connect=0ms service=3ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:55.242244+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=889e0e88-7b3a-4aad-695b-179ad6d9c083 fwd="36.12.128.190" dyno=web.1 connect=0ms service=6ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T11:46:55.417595+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=07dcad1e-ac2a-a461-59aa-4d3227745f73 fwd="36.12.128.190" dyno=web.1 connect=0ms service=92ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:17:58.809809+00:00 heroku[router]: at=info method=POST path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=bb8c98fd-dd75-797c-9dee-0f88135f4b8b fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:17:59.018900+00:00 heroku[router]: at=info method=GET path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1217041d-b347-a5f0-0b0c-325e0accc3de fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=6932 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:17:59.242523+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=fde9f82a-9707-96d3-5100-603fcd1eed91 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:17:59.253458+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4fb09462-5adf-1372-b315-0f0242d1e158 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:09.468550+00:00 heroku[router]: at=info method=POST path="/login" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=bcc5010c-d8de-8544-09f1-c61590103b9c fwd="114.16.204.20" dyno=web.1 connect=0ms service=76ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.050388+00:00 heroku[router]: at=info method=GET path="/?loggedIn" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2f5de6fd-5abe-19e7-5ee7-589e025ed047 fwd="114.16.204.20" dyno=web.1 connect=0ms service=376ms status=200 bytes=33941 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.489574+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=0e85088c-e598-0576-88c7-5fc32e8b72fd fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.493747+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=1fa69d4a-4023-eb58-3d6d-b8fa440b27dd fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.904751+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=efe47f18-89af-aa7c-d431-c78879160431 fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=2ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.908566+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a4d6bcfe-cc3d-e903-5301-92927ebf2473 fwd="114.16.204.20" dyno=web.1 connect=0ms service=6ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:10.913727+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ede2affb-9a77-4e37-88b3-b6c621d22ec9 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.097922+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=ccbc3c96-7a3d-e21e-147c-f851113e44ca fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.110380+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=725745d7-6bee-fc5a-1816-ee2d9527ae80 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.513475+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2df1ab68-09b6-b35f-b73a-21f4d42e0413 fwd="114.16.204.20" dyno=web.1 connect=0ms service=824ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.689559+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=8712a4f8-5077-ab56-fca8-d4f56e3e6272 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.703119+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=2305c16e-8b16-44c2-1762-f3465f02c0fb fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:11.715622+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=4e436f67-edc9-bed7-ea2b-d352912b62df fwd="114.16.204.20" dyno=web.1 connect=0ms service=8ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:12.098145+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=6dbcc811-64c9-910d-a696-4e07be710eeb fwd="114.16.204.20" dyno=web.1 connect=0ms service=9ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:12.457300+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=04776daf-7aca-e6c2-ca40-ac851e4fbcae fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:12.831744+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=a20648c5-ac7c-9540-a220-b392b5ef5629 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2139ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:26.511666+00:00 app[web.1]: com.stripe.exception.InvalidRequestException: Invalid null ID found for url path formatting. This can be because your string ID argument to the API method is null, or the ID field in your stripe object instance is null. Please contact support@stripe.com on the latter case.
+2025-05-18T12:18:26.511823+00:00 app[web.1]: at com.stripe.net.ApiResource.urlEncodeId(ApiResource.java:119)
+2025-05-18T12:18:26.511827+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:633)
+2025-05-18T12:18:26.511828+00:00 app[web.1]: at com.stripe.model.Customer.retrieve(Customer.java:622)
+2025-05-18T12:18:26.511833+00:00 app[web.1]: at com.example.nagoyameshi.service.StripeService.getDefaultPaymentMethod(StripeService.java:86)
+2025-05-18T12:18:26.511835+00:00 app[web.1]: at com.example.nagoyameshi.controller.SubscriptionController.edit(SubscriptionController.java:99)
+2025-05-18T12:18:26.511847+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+2025-05-18T12:18:26.511848+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+2025-05-18T12:18:26.511852+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+2025-05-18T12:18:26.511863+00:00 app[web.1]: at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+2025-05-18T12:18:26.511865+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+2025-05-18T12:18:26.511866+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+2025-05-18T12:18:26.511871+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+2025-05-18T12:18:26.511880+00:00 app[web.1]: at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+2025-05-18T12:18:26.511883+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+2025-05-18T12:18:26.511893+00:00 app[web.1]: at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+2025-05-18T12:18:26.511894+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+2025-05-18T12:18:26.511904+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+2025-05-18T12:18:26.511905+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+2025-05-18T12:18:26.511914+00:00 app[web.1]: at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+2025-05-18T12:18:26.511916+00:00 app[web.1]: at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+2025-05-18T12:18:26.511926+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+2025-05-18T12:18:26.511927+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.511931+00:00 app[web.1]: at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+2025-05-18T12:18:26.511940+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T12:18:26.511941+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.511946+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+2025-05-18T12:18:26.511955+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+2025-05-18T12:18:26.511956+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+2025-05-18T12:18:26.511966+00:00 app[web.1]: at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+2025-05-18T12:18:26.511967+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.511977+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+2025-05-18T12:18:26.511977+00:00 app[web.1]: at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+2025-05-18T12:18:26.511987+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.511988+00:00 app[web.1]: at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+2025-05-18T12:18:26.511998+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.511999+00:00 app[web.1]: at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+2025-05-18T12:18:26.512003+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512013+00:00 app[web.1]: at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+2025-05-18T12:18:26.512014+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512024+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2025-05-18T12:18:26.512025+00:00 app[web.1]: at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+2025-05-18T12:18:26.512034+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512036+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+2025-05-18T12:18:26.512040+00:00 app[web.1]: at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+2025-05-18T12:18:26.512049+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512050+00:00 app[web.1]: at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+2025-05-18T12:18:26.512060+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512060+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512070+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+2025-05-18T12:18:26.512072+00:00 app[web.1]: at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+2025-05-18T12:18:26.512073+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512083+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512085+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+2025-05-18T12:18:26.512089+00:00 app[web.1]: at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+2025-05-18T12:18:26.512098+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512099+00:00 app[web.1]: at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+2025-05-18T12:18:26.512111+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512111+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512121+00:00 app[web.1]: at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+2025-05-18T12:18:26.512121+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512131+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+2025-05-18T12:18:26.512132+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+2025-05-18T12:18:26.512136+00:00 app[web.1]: at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+2025-05-18T12:18:26.512146+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T12:18:26.512147+00:00 app[web.1]: at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+2025-05-18T12:18:26.512159+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+2025-05-18T12:18:26.512160+00:00 app[web.1]: at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+2025-05-18T12:18:26.512171+00:00 app[web.1]: at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)        
+2025-05-18T12:18:26.512172+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+2025-05-18T12:18:26.512173+00:00 app[web.1]: at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+2025-05-18T12:18:26.512184+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T12:18:26.512184+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.512188+00:00 app[web.1]: at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+2025-05-18T12:18:26.512197+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512198+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T12:18:26.512209+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.512210+00:00 app[web.1]: at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+2025-05-18T12:18:26.512214+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512224+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T12:18:26.512224+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.512235+00:00 app[web.1]: at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+2025-05-18T12:18:26.512235+00:00 app[web.1]: at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+2025-05-18T12:18:26.512246+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+2025-05-18T12:18:26.512246+00:00 app[web.1]: at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+2025-05-18T12:18:26.512257+00:00 app[web.1]: at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+2025-05-18T12:18:26.512257+00:00 app[web.1]: at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+2025-05-18T12:18:26.512267+00:00 app[web.1]: at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+2025-05-18T12:18:26.512269+00:00 app[web.1]: at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+2025-05-18T12:18:26.512273+00:00 app[web.1]: at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+2025-05-18T12:18:26.512283+00:00 app[web.1]: at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+2025-05-18T12:18:26.512285+00:00 app[web.1]: at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:732)
+2025-05-18T12:18:26.512289+00:00 app[web.1]: at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+2025-05-18T12:18:26.512299+00:00 app[web.1]: at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+2025-05-18T12:18:26.512299+00:00 app[web.1]: at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+2025-05-18T12:18:26.512310+00:00 app[web.1]: at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+2025-05-18T12:18:26.512310+00:00 app[web.1]: at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+2025-05-18T12:18:26.512322+00:00 app[web.1]: at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+2025-05-18T12:18:26.512323+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+2025-05-18T12:18:26.512327+00:00 app[web.1]: at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+2025-05-18T12:18:26.512337+00:00 app[web.1]: at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+2025-05-18T12:18:26.512338+00:00 app[web.1]: at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-05-18T12:18:26.513443+00:00 heroku[router]: at=info method=GET path="/subscription/edit" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=75b51bc0-0df4-7984-e277-ac1b22916992 fwd="114.16.204.20" dyno=web.1 connect=0ms service=3ms status=302 bytes=0 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.092972+00:00 heroku[router]: at=info method=GET path="/" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=982dd8ff-1e15-529f-faa1-6ff790505f7a fwd="114.16.204.20" dyno=web.1 connect=0ms service=379ms status=200 bytes=33993 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.503530+00:00 heroku[router]: at=info method=GET path="/css/style.css" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=e9fec072-8959-6752-6983-93c50f0af420 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=6733 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.510596+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=fb488749-71f3-38c6-bfe1-1f1b46df45af fwd="114.16.204.20" dyno=web.1 connect=0ms service=4ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.510862+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=390e5ab0-3f30-cd0c-aa5a-df1789be2f23 fwd="114.16.204.20" dyno=web.1 connect=0ms service=4ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.512242+00:00 heroku[router]: at=info method=GET path="/images/logo.svg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=701516ce-7028-ccf8-5cc7-6235b30e1f38 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=1354 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.515244+00:00 heroku[router]: at=info method=GET path="/images/no_image.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=c5f2c1e5-b674-34ab-77f0-f88429e7969c fwd="114.16.204.20" dyno=web.1
+ connect=0ms service=1ms status=200 bytes=3296 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.560147+00:00 heroku[router]: at=info method=GET path="/images/main1.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=04bae105-5ebb-edf1-bd06-fff884f1d31a fwd="114.16.204.20" dyno=web.1 connect=0ms service=47ms status=200 bytes=1377017 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.699969+00:00 heroku[router]: at=info method=GET path="/js/carousel.js" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9aa789eb-531a-8188-bdef-0a7dfea5f27a fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=184 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.708620+00:00 heroku[router]: at=info method=GET path="/images/washoku.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=07e926b4-2066-d67d-6a21-e93b0820c5f6 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=82388 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.712091+00:00 heroku[router]: at=info method=GET path="/images/udon.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=b95a9dd9-8077-32ef-cfb0-90e32acbb495 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=77449 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:27.896127+00:00 heroku[router]: at=info method=GET path="/images/don.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=91a0331d-964b-19f4-1947-96f2b16a2005 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=73390 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:28.284815+00:00 heroku[router]: at=info method=GET path="/images/ramen.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=372dea7b-41d1-54d3-c0e0-bde537cac5a1 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=82917 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:28.287532+00:00 heroku[router]: at=info method=GET path="/images/main3.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=f7f61cda-55db-5e92-2c9a-7f6a64842d91 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=692742 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:28.310232+00:00 heroku[router]: at=info method=GET path="/images/oden.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=d37bbee9-eeb0-829c-eb54-018ea4695ad3 fwd="114.16.204.20" dyno=web.1 connect=0ms service=1ms status=200 bytes=58452 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:28.520744+00:00 heroku[router]: at=info method=GET path="/images/fried.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=9d32626e-20e2-9ddc-2343-6c5ef2c965c9 fwd="114.16.204.20" dyno=web.1 connect=0ms service=2ms status=200 bytes=75670 protocol=http1.1 tls=true tls_version=unknown
+2025-05-18T12:18:28.729012+00:00 heroku[router]: at=info method=GET path="/images/main2.jpg" host=leinagoyameshi-eb11728ab289.herokuapp.com request_id=5e8280d2-0790-a19d-8ffd-677a8d16d072 fwd="114.16.204.20" dyno=web.1 connect=0ms service=5ms status=200 bytes=1583048 protocol=http1.1 tls=true tls_version=unknown

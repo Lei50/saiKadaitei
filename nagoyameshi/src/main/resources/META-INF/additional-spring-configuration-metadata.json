@@ -1,5 +1,0 @@
-{"properties": [{
-  "name": "stripe.premium-plan-price-id",
-  "type": "java.lang.String",
-  "description": "A description for 'stripe.premium-plan-price-id'"
-}]}

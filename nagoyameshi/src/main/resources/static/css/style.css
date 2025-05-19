@@ -1,391 +1,305 @@
-/* Bootstrap用スタイルここから */
-:root {
-  --bs-font-sans-serif: 'Noto Sans JP', sans-serif;
-  --bs-body-font-size: 0.9rem;
-  --bs-body-line-height: 1.6;
-  --bs-primary: #d95204;
-  --bs-danger: #d90421;
-  --bs-link-color: #d95204;
-  --bs-link-hover-color: #ae4203;
+html {
+  font-size: 14px;
 }
 
-.navbar {
-  --bs-navbar-toggler-font-size: 1.125rem;
+body {
+  font-family: 'Noto Sans JP', sans-serif;  
 }
-
-.dropdown-menu {
-  --bs-dropdown-font-size: 0.9rem;
-  --bs-dropdown-link-active-bg: #d95204;
-}
-
-.btn {
-  --bs-btn-font-size: 0.9rem;
-  --bs-btn-line-height: 1.6;
-}
-
-.pagination {
-  --bs-pagination-font-size: 0.9rem;
-  --bs-pagination-focus-box-shadow: 0 0 0 .25rem rgba(217, 82, 4, .25);
-  --bs-pagination-active-bg: #d95204;
-  --bs-pagination-active-border-color: #d95204;
-}
-
-.modal {
-  --bs-modal-title-line-height: 1.6;
-}
-
-.form-control {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.form-control:focus {
-  border-color: #eca982;
-  box-shadow: 0 0 0 0.25rem #d9520440;
-}
-
-.col-form-label {
-  line-height: 1.6;
-}
-
-.form-check-input {
-  margin-top: 0.3em;
-}
-
-.form-check {
-  min-height: 1.44rem;
-}
-
-.form-check-input:checked {
-  background-color: #d95204;
-  border-color: #d95204 !important;
-}
-
-.form-check-input:focus {
-  border-color: #eca982;
-  box-shadow: 0 0 0 0.25rem #d9520440;
-}
-
-.btn-group-sm>.btn, .btn-sm {
-  --bs-btn-font-size: 0.7875rem;
-}
-
-.fs-5 {
-  font-size: 1.125rem !important;
-}
-
-.fs-6 {
-    font-size: 0.9rem !important;
-}
-
-.form-select-sm {
-    font-size: 0.7875rem;
-}
-
-.form-select {
-  line-height: 1.6;
-}
-
-.btn-outline-primary {
-  --bs-btn-color: #d95204;
-  --bs-btn-border-color: #d95204;
-  --bs-btn-hover-bg: #d95204;
-  --bs-btn-hover-border-color: #d95204;
-  --bs-btn-focus-shadow-rgb: 217, 82, 4;
-  --bs-btn-active-bg: #d95204;
-  --bs-btn-active-border-color: #d95204;
-  --bs-btn-disabled-color: #d95204;
-  --bs-btn-disabled-border-color: #d95204;
-}
-/* Bootstrap用スタイルここまで */
 
 h1 {
   font-size: 1.5rem;
 }
 
 h2 {
-  font-size: 1.375rem;
+  	font-size: 1.475rem;
 }
 
 h3 {
-  font-size: 1.125rem;
-}
-
-h5 {
-  font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 a {
-  color: #d95204;
+/*  color: #5196a6;*/
+  color: #005133;
   text-decoration: none !important;
 }
 
 a:hover {
-    color: #ae4203;
-}
-
-.nagoyameshi-wrapper {
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 240px;
-  box-sizing: border-box;
-}
-
-.nagoyameshi-logo {
-  height: 24px;
-}
-
-.nagoyameshi-app-name {
-  font-family: 'Carter One', cursive;
-  font-size: 24px;
-  color: #191919;
-}
-
-nav .nagoyameshi-app-name {
-    padding: 0.32rem 0;
+    color: #407784;
 }
 
 footer {
   width: 100%;
   height: 60px;
-
-
   position: absolute;
-  bottom: 0;
-  padding: 50px 15px;
+  bottom: 0;    
+  background-color: #f2f0eb;
 }
 
-.nagoyameshi-footer-logo {
-  margin-bottom: 20px;
+.samuraitabelog-wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
-.nagoyameshi-footer-link {
-  margin-bottom: 30px;
+.samuraitabelog-navbar {
+  min-height: 60px;
 }
 
-.nagoyameshi-btn {
-  background-color: #d95204 !important;
-  transition: 0.15s;
+.samuraitabelog-logo {
+  height: 50px;  
 }
 
-.nagoyameshi-btn:hover {
-  opacity: 0.85;
-}
-
-.nagoyameshi-btn-danger {
-  background-color: #d90421 !important;
-  transition: 0.15s;
-}
-
-.nagoyameshi-btn-danger:hover {
-  background-color: #b8031c !important;
-  border-color: #ae031a;
-}
-
-.nagoyameshi-swiper {
+.samuraitabelog-header-photo {
   width: 100%;
-  height: 480px;
+/*  height: 300px;  */
+  height: fit-content;  
 }
 
-.nagoyameshi-swiper img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
+.samuraitabelog-image-size {
+  max-height: 60vh; 
+  max-width: fit-content; 
 }
 
-.nagoyameshi-overlay-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+.samuraitabelog-btn {
+/*  background-color: #5196a6 !important;   */
+  background-color: #FFC40C !important;   
+  transition: 0.1s;
 }
 
-.nagoyameshi-overlay-text {
-  padding: 0 70px;
+.samuraitabelog-btn:hover {
+  opacity: 0.8;   
 }
 
-.nagoyameshi-catchphrase-heading {
-  font-size: 36px;
-  line-height: 1.5;
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 600;
-  text-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 60%);
+.samuraitabelog-page-link {
+/*  color: #5196a6;*/
+  color: #FFC40C;;
 }
 
-.nagoyameshi-catchphrase-paragraph {
-  font-size: 16px;
-  line-height: 2;
-  font-family: 'Noto Serif JP', serif;
-  font-weight: 400;
-  text-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 60%);
+.samuraitabelog-page-link:hover {
+  color: #407784;
 }
 
-.nagoyaemshi-admin-search-box {
-  max-width: 240px;
+.samuraitabelog-active {
+/*  background-color: #5196a6 !important;*/
+/*  border-color: #5196a6 !important;*/
+  background-color: #FFC40C !important;
+  border-color: #FFC40C !important;
 }
 
-.nagoyameshi-user-search-box {
-  max-width: 300px;
+.samuraitabelog-pre-wrap {
+	/* 改行文字で行を折り返す */
+	white-space: pre-wrap;
 }
 
-.nagoyameshi-users-table {
-  word-break: break-all;
+.samuraitabelog-link-danger {
+     color: #f2594b;
+ }
+ 
+ .samuraitabelog-link-danger:hover {
+     color: #a63c3c;
+ }
+ 
+ .samuraitabelog-btn-danger {
+     background-color: #f2594b !important;
+     transition: 0.1s;
+ }
+ 
+ .samuraitabelog-btn-danger:hover {
+   opacity: 0.8;   
+ }
+
+.samuraitabelog-dropdown-item:active {
+   background-color: #5196a6;
+ }
+ 
+.samuraitabelog-card-link {
+	transition: 0.3s;
 }
 
-.nagoyameshi-terms h2 {
-  font-size: 1.125rem;
+.samuraitabelog-card-link:hover {
+	opacity: 0.7;
 }
 
-.nagoyameshi-card-link {
-  transition: 0.3s;
+.samuraitabelog-horizontal-card-image {
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
 }
 
-.nagoyameshi-card-link:hover {
+.samuraitabelog-sort-box {
+   width: 150px;
+ }
+ 
+.samuraitabelog-vertical-card-image {
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+}
+ 
+ .samuraitabelog-search-form {
+     max-width: 300px;
+ }
+ 
+ .samuraitabelog-star-full {
+  color: #FFC20E;
+}
+ 
+ .samuraitabelog-timepicker-form {
+     height: 34px;
+/*     border-color: lightgrey;*/
+     border: 1px solid lightgrey;
+     border-radius: 4px;     
+     padding: 10px;
+ }
+ 
+ /* ベースのFlatpickrスタイルをカスタマイズ */
+.flatpickr-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+/*    font-family: 'Arial', sans-serif;*/
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f7f9fc;
+/*    background-color:red;*/
+    border-radius: 8px;
+    padding: 10px;
+/*    width: 200px;*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* 外枠を見切れさせない */
+}
+
+/* 不要な分・秒を非表示 */
+.flatpickr-time .flatpickr-minute {
+    display: none !important; /* 完全に非表示にする */
+}
+
+/*.flatpickr-time .flatpickr-minute .arrow {*/
+/*    display: none !important;  完全に非表示にする */
+/*}*/
+
+
+/* 時間選択の各要素 */
+.flatpickr-time .flatpickr-hour　{
+    width: 70px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+/*    border: 1px solid red;*/
+    background-color: white;
+    text-align: center;
+    font-size: 1.2rem;
+/*    font-weight: bold;*/
+    line-height: 40px;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+/* 選択中の要素 */
+.flatpickr-time .flatpickr-hour:hover,
+.flatpickr-time .flatpickr-minute:hover,
+.flatpickr-time .flatpickr-second:hover,
+.flatpickr-time .flatpickr-am-pm:hover {
+    background-color: #eaf3ff;
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* ドラムロールのエフェクト風 */
+.flatpickr-time .flatpickr-hour,
+.flatpickr-time .flatpickr-minute,
+.flatpickr-time .flatpickr-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: auto;
+}
+
+/* 確認画面の Card のスタイル */
+.confirm-card {
+	width: 90%; 
+	max-width: 600px;
+}
+
+.confirm-card-body {
+	padding: 20px;
+}
+
+.confirm-card-btn {
+	width: 120px;
+}
+
+.complete-card-btn {
+	width: 180px;
+}
+
+.category-btn {
+	width: 240px;
+	font-size: 1.5rem;
+	line-height: 60px; /* 行の高さをボタンの高さと同じに設定 */
+    text-align: center; /* 水平方向の中央揃え */
+    vertical-align: middle; /* 垂直方向の中央揃え */
+}
+
+.catgory-btn-image { 
+  width: 260px; 
+}
+
+.catgory-btn-image:hover { 
+   opacity: 0.6; 
+}
+
+.btn-w160 {
+	width: 160px;
+}
+
+.link-disabled {
+	color: lightgray;
+	cursor: not-allowed;       /* 禁止マークを表示 */
+}
+
+
+.samuraitabelog-cancel-btn {
+	color: #FFC40C !important; 
+	background-color: white !important; 
+	border: 1px solid #FFC40C;  
+  	transition: 0.1s;	
+}
+
+.samuraitabelog-cancel-btn:hover {
+	color:  #191C16 !important;
+	background-color: #B4BBAB !important;
+	border: 1px solid #FFC40C; 
+  	opacity: 0.6;   
+}
+
+.samuraitabelog-btn-link-style {
+  color: #FFC40C;
+  text-decoration: none !important;
+}
+
+.samuraitabelog-btn-link-style:hover {
+  color: #FFC40C;
   opacity: 0.7;
 }
 
-.nagoyameshi-vertical-card-image {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
+.reserve-status-ended {
+	color: green;
 }
 
-.nagoyameshi-horizontal-card-image {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.nagoyameshi-overlay-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-.nagoyameshi-category-name {
-  text-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 60%);
-}
-
-.nagoyameshi-sort-box {
-  width: 150px;
-}
-
-.nagoyameshi-bg {
-  background-color: #d95204 !important;
-}
-
-.nagoyameshi-remove-favorite-button:hover {
-  color: white;
-}
-
-/* 星評価ここから */
-.nagoyameshi-star-rating {
-  position: relative;
-  z-index: 0;
-  display: inline-block;
-  white-space: nowrap;
-  color: #cccccc;
-}
-
-.nagoyameshi-star-rating:before,
-.nagoyameshi-star-rating:after {
-  content: '★★★★★';
-}
-
-.nagoyameshi-star-rating:after {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  color: #f29f05;
-}
-
-.nagoyameshi-star-rating[data-rate="5.0"]:after {
-  width: 100%;
-}
-.nagoyameshi-star-rating[data-rate="4.5"]:after {
-  width: 90%;
-}
-.nagoyameshi-star-rating[data-rate="4.0"]:after {
-  width: 80%;
-}
-.nagoyameshi-star-rating[data-rate="3.5"]:after {
-  width: 70%;
-}
-.nagoyameshi-star-rating[data-rate="3.0"]:after {
-  width: 60%;
-}
-.nagoyameshi-star-rating[data-rate="2.5"]:after {
-  width: 50%;
-}
-.nagoyameshi-star-rating[data-rate="2.0"]:after {
-  width: 40%;
-}
-.nagoyameshi-star-rating[data-rate="1.5"]:after {
-  width: 30%;
-}
-.nagoyameshi-star-rating[data-rate="1.0"]:after {
-  width: 20%;
-}
-.nagoyameshi-star-rating[data-rate="0.5"]:after {
-  width: 10%;
-}
-.nagoyameshi-star-rating[data-rate="0.0"]:after {
-  width: 0%;
-}
-/* 星評価ここまで */
-
-/* flatpickrの土曜日の色 */
-.flatpickr-weekday:nth-child(7),
-.flatpickr-days .flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n) {
-  color: #0421D9;
-}
-
-/* flatpickrの日曜日の色 */
-.flatpickr-weekday:nth-child(7n + 1),
-.flatpickr-day:not(.flatpickr-disabled):not(.prevMonthDay):not(.nextMonthDay):nth-child(7n + 1) {
-  color: #D90421;
-}
-
-/* flatpickrの選択された日付の色 */
-.flatpickr-day.selected {
-  background: #D95204 !important;
-  border-color: #D95204 !important;
-}
-
-/* クレジットカード番号入力フォーム */
-.nagoyameshi-card-holder-name,
-.nagoyameshi-card-element {
-  border-radius: .375rem;
-  padding: 12px;
-  border: 1px solid #ced4da;
-  height: 44px;
-  width: 100%;
-  background: white;
-}
-
-.nagoyameshi-card-holder-name {
-  font-family: sans-serif;
-  outline: none;
-}
-
-.nagoyameshi-card-error {
-  display: none;
+.reserve-status-active {
+	color: darkorange;
 }
 
 @media screen and (min-width: 1400px) {
-  .nagoyameshi-container {
+  .samuraitabelog-container {
     max-width: 1200px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .admin-sidebar {
-    display: none;
   }
 }

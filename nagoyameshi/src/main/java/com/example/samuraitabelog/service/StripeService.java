@@ -138,11 +138,18 @@ public class StripeService {
 				for (SubscriptionEntity subscriptionEntity : subscriptionEntities) {
 					// 無料プランの場合、アップグレード処理を行う
 					if (subscriptionEntity.getEnabled()
-							&& (subscriptionEntity.getUser() == null)
 							&& (planType.getId() == planTypeRepository.findByName("フリー").getId())) {
+
+						// userが未設定の場合はセット
+						if (subscriptionEntity.getUser() == null) {
+							subscriptionEntity.setUser(user);
+							subscriptionRepository.save(subscriptionEntity);
+						}
+
 						subscriptionService.upgrade(subscriptionEntity.getId(), user.getId());
 						System.out.println("アップグレード処理が成功しました。");
 					}
+
 				}
 			} else if (subscriptionEntities != null && subscriptionEntities.size() == 0) {
 				// customer.subscription_create と前後することがあるので、データがない場合はここでも作成処理を行う			

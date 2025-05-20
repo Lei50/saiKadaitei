@@ -19,7 +19,10 @@ import com.example.samuraitabelog.repository.RoleRepository;
 import com.example.samuraitabelog.repository.UserRepository;
 import com.example.samuraitabelog.repository.projection.UserSubscriptionProjection;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j // ← ログ出力用
 public class UserService {
 	private final UserRepository userRepository;
 	private final RoleRepository roleRepository;
@@ -77,9 +80,7 @@ public class UserService {
 		
 	@Transactional
 	public void disable(User user) {
-				
 		user.setEnabled(false);
-		
 		userRepository.save(user);
 	}
 	
@@ -105,44 +106,56 @@ public class UserService {
 	@Transactional
 	public void resetPassword(PasswordResetForm passwordResetForm) {
 		User user = userRepository.getReferenceById(passwordResetForm.getUserId());
-
 		user.setPassword(passwordEncoder.encode(passwordResetForm.getPassword()));
-		
 		userRepository.save(user);
 	}
-	
-	// メールアドレスが登録済みかどうかをチェックする
+
 	public boolean isEmailRegistered(String email) {
 		User user = userRepository.findByEmail(email);
 		return user != null;
 	}
 	
-	// パスワードとパスワード（確認用）の入力値が一致するかどうかをチェックする
 	public boolean isSamePassword(String password, String passwordConfirmation) {
 		return password.equals(passwordConfirmation);
 	}
 	
-	// ユーザーを有効にする
 	@Transactional
 	public void enableUser(User user) {
 		user.setEnabled(true);
 		userRepository.save(user);
 	}
 	
-	// メールアドレスが変更されたかどうかをチェックする
 	public boolean isEmailChanged(UserEditForm userEditForm) {
 		User currentUser = userRepository.getReferenceById(userEditForm.getId());
 		return !userEditForm.getEmail().equals(currentUser.getEmail());
 	}
 	
-	// 全会員の情報とサブスクリプション状態を合わせて取得する
-    public Page<UserSubscriptionProjection> getAllUsers(Pageable pageable) {
-        return userRepository.findAllWithLatestSubscriptions(pageable);
-    }
+	public Page<UserSubscriptionProjection> getAllUsers(Pageable pageable) {
+		return userRepository.findAllWithLatestSubscriptions(pageable);
+	}
     
-    // 全会員の情報とサブスクリプション状態を合わせて取得する
-    public Page<UserSubscriptionProjection> getSearchUsers(String keyword, Pageable pageable) {
-        return userRepository.searchUserWithLatestSubscriptions(keyword, pageable);
+	public Page<UserSubscriptionProjection> getSearchUsers(String keyword, Pageable pageable) {
+		return userRepository.searchUserWithLatestSubscriptions(keyword, pageable);
+	}
+
+	//  追加：Stripe支払い完了後のプラン・ロール更新メソッド 
+@Transactional
+public void updatePlanAndRole(Integer userId, String planTypeName, String roleName) {
+    User user = userRepository.findById(userId)
+        .orElseThrow(() -> new IllegalArgumentException("User not found with ID: " + userId));
+
+    PlanType planType = planTypeRepository.findByName(planTypeName);
+    Role role = roleRepository.findByName(roleName);
+
+    if (planType == null || role == null) {
+        throw new IllegalArgumentException("Invalid planType or role name: " + planTypeName + ", " + roleName);
     }
 
+    log.info("Updating userId={} to planType='{}', role='{}'", userId, planTypeName, roleName);
+
+    user.setPlanType(planType);
+    user.setRole(role);
+
+    userRepository.save(user);
+}
 }

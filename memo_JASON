@@ -1,0 +1,124 @@
+{
+  "id": "evt_1RQqXPBUES6M2scHVAXO1Af4",
+  "object": "event",
+  "api_version": "2025-03-31.basil",
+  "created": 1747748939,
+  "data": {
+    "object": {
+      "id": "cs_test_a1LLUTvpQF2os8yIqJnVAodEAtieKnvGfEpQCH60eE2t0F0Zm7Nhp5NzXb",
+      "object": "checkout.session",
+      "adaptive_pricing": null,
+      "after_expiration": null,
+      "allow_promotion_codes": null,
+      "amount_subtotal": 300,
+      "amount_total": 300,
+      "automatic_tax": {
+        "enabled": true,
+        "liability": {
+          "type": "self"
+        },
+        "provider": "stripe",
+        "status": "complete"
+      },
+      "billing_address_collection": null,
+      "cancel_url": "https://leinagoyameshi-eb11728ab289.herokuapp.com/user",
+      "client_reference_id": null,
+      "client_secret": null,
+      "collected_information": {
+        "shipping_details": null
+      },
+      "consent": null,
+      "consent_collection": null,
+      "created": 1747748929,
+      "currency": "jpy",
+      "currency_conversion": null,
+      "custom_fields": [
+      ],
+      "custom_text": {
+        "after_submit": null,
+        "shipping_address": null,
+        "submit": null,
+        "terms_of_service_acceptance": null
+      },
+      "customer": "cus_SLXcqYSnVsXJuk",
+      "customer_creation": "always",
+      "customer_details": {
+        "address": {
+          "city": null,
+          "country": "JP",
+          "line1": null,
+          "line2": null,
+          "postal_code": null,
+          "state": null
+        },
+        "email": "taro.samurai@example.com",
+        "name": "侍 三郎",
+        "phone": null,
+        "tax_exempt": "none",
+        "tax_ids": [
+        ]
+      },
+      "customer_email": "taro.samurai@example.com",
+      "discounts": [
+      ],
+      "expires_at": 1747835328,
+      "invoice": "in_1RQqXMBUES6M2scHmiqXaoWZ",
+      "invoice_creation": null,
+      "livemode": false,
+      "locale": null,
+      "metadata": {
+        "userId": "1"
+      },
+      "mode": "subscription",
+      "payment_intent": null,
+      "payment_link": null,
+      "payment_method_collection": "always",
+      "payment_method_configuration_details": null,
+      "payment_method_options": {
+        "card": {
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "payment_status": "paid",
+      "permissions": null,
+      "phone_number_collection": {
+        "enabled": false
+      },
+      "recovered_from": null,
+      "saved_payment_method_options": {
+        "allow_redisplay_filters": [
+          "always"
+        ],
+        "payment_method_remove": "disabled",
+        "payment_method_save": null
+      },
+      "setup_intent": null,
+      "shipping_address_collection": null,
+      "shipping_cost": null,
+      "shipping_options": [
+      ],
+      "status": "complete",
+      "submit_type": null,
+      "subscription": "sub_1RQqXMBUES6M2scH47fvQTmO",
+      "success_url": "https://leinagoyameshi-eb11728ab289.herokuapp.com/subscribe/upgraded",
+      "total_details": {
+        "amount_discount": 0,
+        "amount_shipping": 0,
+        "amount_tax": 0
+      },
+      "ui_mode": "hosted",
+      "url": null,
+      "wallet_options": null
+    }
+  },
+  "livemode": false,
+  "pending_webhooks": 2,
+  "request": {
+    "id": null,
+    "idempotency_key": null
+  },
+  "type": "checkout.session.completed"
+}

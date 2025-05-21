@@ -1,195 +1,116 @@
--- categoriesテーブル
-INSERT IGNORE INTO categories (id, name) VALUES (1, '焼き鳥');
-INSERT IGNORE INTO categories (id, name) VALUES (2, '焼肉');
-INSERT IGNORE INTO categories (id, name) VALUES (3, 'お寿司');
-INSERT IGNORE INTO categories (id, name) VALUES (4, 'ラーメン');
-INSERT IGNORE INTO categories (id, name) VALUES (5, '居酒屋');
-INSERT IGNORE INTO categories (id, name) VALUES (6, 'カフェ');
-INSERT IGNORE INTO categories (id, name) VALUES (7, 'パスタ');
-INSERT IGNORE INTO categories (id, name) VALUES (8, '蕎麦');
-INSERT IGNORE INTO categories (id, name) VALUES (9, 'お好み焼き');
-INSERT IGNORE INTO categories (id, name) VALUES (10, '牛丼');
-INSERT IGNORE INTO categories (id, name) VALUES (11, '定食屋');
-INSERT IGNORE INTO categories (id, name) VALUES (12, 'ピザ');
-
-
 -- restaurantsテーブル
-
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (2, '肉三昧', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '16:00:00', '23:00:00', 4000, 8000, 50, '030-0945', '青森県青森市桜川X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (3, '寿司荘', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '17:00:00', '23:00:00', 10000, 20000, 40, '029-5618', '岩手県和賀郡西和賀町沢内両沢X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (4, 'めんめん', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '08:00:00', '23:00:00', 1000, 2000, 60, '989-0555', '宮城県刈田郡七ヶ宿町滝ノ上X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (5, 'もりあげ亭', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '18:00:00', '23:00:00', 3000, 6000, 80, '018-2661', '秋田県山本郡八峰町八森浜田X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (6, 'らんらんカフェ', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '07:00:00', '18:00:00', 1500, 2500, 30, '999-6708', '山形県酒田市泉興野X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (7, 'のびのびパスタ', 'restaurant07.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 7, '11:00:00', '21:00:00', 1500, 4000, 60, '969-5147', '福島県会津若松市大戸町芦牧X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (8, '蕎麦処SAMURAI', 'restaurant08.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 8, '01:00:00', '23:00:00', 1000, 2000, 50, '310-0021', '茨城県水戸市南町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (9, 'SAMURAI風お好み焼き', 'restaurant09.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 9, '11:00:00', '22:00:00', 1500, 3000, 65, '323-1101', '栃木県下都賀郡藤岡町大前X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (10, 'どんべえ', 'restaurant10.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 10, '03:00:00', '23:00:00', 1000, 2500, 135, '370-0806', '群馬県高崎市上和田町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (11, '100円食堂', 'restaurant11.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 11, '05:00:00', '23:00:00', 1000, 2000, 50, '344-0125', '埼玉県春日部市飯沼X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (12, 'ピッツァホット', 'restaurant12.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 12, '15:00:00', '22:00:00', 4000, 8000, 35, '272-0011', '千葉県市川市高谷新町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (13, 'TORI元', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '17:00:00', '23:00:00', 3000, 5000, 40, '130-0023', '東京都墨田区立川X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (14, 'YAKINIKU', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '09:00:00', '22:00:00', 3000, 4500, 60, '240-0006', '神奈川県横浜市保土ヶ谷区星川X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (15, 'SAMURAI SUSHI館', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '18:00:00', '22:00:00', 5000, 8000, 50, '950-0201', '新潟県新潟市駒込X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (16, 'THE MEN', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '15:00:00', '23:00:00', 1500, 2500, 50, '939-8155', '富山県富山市江本X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (17, 'たこ八いか八', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '13:00:00', '22:00:00', 2500, 6000, 50, '929-0111', '石川県能美市吉原町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (18, '喫茶TEN', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '10:00:00', '20:00:00', 1500, 3000, 80, '910-2354', '福井県福井市東天田町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (19, '鳥侍', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '13:00:00', '22:00:00', 1500, 2500, 24, '403-0003', '山梨県富士吉田市大明見X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (20, '鳥弁', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '10:00:00', '18:00:00', 1000, 1800, 20, '395-0017', '長野県飯田市東新町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (21, 'バード 侍鳥', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '15:00:00', '22:00:00', 3000, 4000, 50, '509-5147', '岐阜県土岐市泉郷町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (22, '侍屋', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '22:00:00', 3500, 6000, 80, '434-0002', '静岡県浜松市尾野X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (23, '焼き屋 侍', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '18:00:00', '23:00:00', 2500, 4500, 120, '444-3261', '愛知県豊田市東大林町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (24, 'とりみらい', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '23:00:00', 5000, 8000, 40, '510-0201', '三重県鈴鹿市稲生町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (25, 'くっくどり', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '22:00:00', 2500, 5000, 45, '520-2353', '滋賀県野洲市久野部X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (26, '侍の鶏焼き', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '22:00:00', 3500, 4500, 50, '612-8369', '京都府京都市伏見区村上町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (27, 'YAKI TORI', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '22:00:00', 6000, 10000, 30, '578-0915', '大阪府東大阪市古箕輪X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (28, 'ポエム鳥亭', 'restaurant01.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 1, '16:00:00', '22:00:00', 4000, 5000, 60, '655-0891', '兵庫県神戸市垂水区山手X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (29, 'ヴィラ焼肉寺', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '15:00:00', '22:00:00', 5000, 10000, 45, '630-1126', '奈良県奈良市法用町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (30, '寿司三昧', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '10:00:00', '22:00:00', 3500, 5500, 70, '640-8319', '和歌山県和歌山市手平X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (31, '麺や侍', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '17:00:00', '23:00:00', 2000, 4500, 80, '689-2203', '鳥取県東伯郡北栄町原X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (32, '酔いどれ館', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '13:00:00', '21:00:00', 4000, 6000, 70, '694-0035', '島根県大田市五十猛町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (33, '和喫茶あずき', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '11:00:00', '21:00:00', 1500, 2500, 40, '712-8036', '岡山県倉敷市水島西弥生町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (34, '焼きの家', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '16:00:00', '23:00:00', 4000, 6000, 50, '726-0011', '広島県府中市広谷町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (35, 'すしの家', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '16:00:00', '22:00:00', 4000, 10000, 50, '750-0451', '山口県下関市豊田町阿座上X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (36, 'さむらい屋台', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '18:00:00', '22:00:00', 1000, 2000, 20, '778-0004', '徳島県三好市池田町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (37, 'あさひ侍屋', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '12:00:00', '23:00:00', 4000, 8000, 200, '762-0067', '香川県坂出市瀬居町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (38, 'ちょこっとゴドバ', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '09:00:00', '22:00:00', 1000, 3000, 60, '792-0828', '愛媛県新居浜市松原町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (39, 'さむらい屋', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '09:00:00', '18:00:00', 5000, 7000, 55, '787-1323', '高知県四万十市西土佐中半X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (40, 'さむらい寿司ハウス', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '15:00:00', '22:00:00', 4000, 6000, 40, '835-0018', '福岡県みやま市瀬高町高柳X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (41, 'らーめんハウス', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '12:00:00', '22:00:00', 1000, 3000, 60, '840-0213', '佐賀県佐賀市大和町久留間X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (42, 'MORI MORI', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '16:00:00', '23:00:00', 3500, 5500, 40, '852-8104', '長崎県長崎市茂里町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (43, 'ぶらりカフェ', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '09:00:00', '23:00:00', 1000, 3500, 50, '863-0021', '熊本県天草市港町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (44, 'マッハ肉さむらい', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '15:00:00', '20:00:00', 3000, 5000, 45, '872-0014', '大分県宇佐市南鶴田新田X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (45, 'さむらい寿司亭', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '13:00:00', '22:00:00', 8000, 20000, 24, '880-0947', '宮崎県宮崎市薫る坂X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (46, 'らーめん食堂', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '10:00:00', '22:00:00', 1500, 2000, 35, '895-2103', '鹿児島県薩摩郡さつま町紫尾X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (47, 'おつまみ処', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '17:00:00', '23:00:00', 5000, 20000, 80, '904-2165', '沖縄県沖縄市宮里X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (48, '窓辺の珈琲屋', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '10:00:00', '22:00:00', 1500, 2500, 40, '041-1121', '北海道亀田郡七飯町大中山X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (49, 'さむらい館', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '16:00:00', '22:00:00', 4000, 5000, 70, '095-0019', '北海道士別市大通東X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (50, 'Go Go SUSHI', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '17:00:00', '22:00:00', 5000, 7000, 35, '099-0423', '北海道紋別郡遠軽町若松X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (51, 'はとはとらーめん', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '18:00:00', '23:00:00', 3000, 4000, 40, '089-0533', '北海道中川郡幕別町札内新北町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (52, '酒豪の宿', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '17:00:00', '23:00:00', 3000, 9000, 90, '049-3514', '北海道山越郡長万部町富野X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (53, 'ロックサムライCafe', 'restaurant06.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 6, '14:00:00', '23:00:00', 2000, 4000, 80, '066-0018', '北海道千歳市旭ヶ丘X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (54, 'サムライじゅーじゅー亭', 'restaurant02.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 2, '18:00:00', '23:00:00', 4500, 6000, 100, '003-0804', '北海道札幌市白石区菊水四条X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (55, 'とんでも寿司', 'restaurant03.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 3, '16:00:00', '22:00:00', 3000, 9000, 35, '042-0908', '北海道函館市銅山町X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (56, '麺とわたし', 'restaurant04.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 4, '13:00:00', '22:00:00', 1500, 2500, 30, '050-0061', '北海道室蘭市八丁平X-XX-XX', '012-345-678');
-INSERT IGNORE INTO restaurants (id, name, image_name, description, category_id, opening_time, closing_time, lowest_price, highest_price, number_of_seats, postal_code, address, phone_number) VALUES (57, '居酒屋 サムライ', 'restaurant05.jpg', '最寄り駅から徒歩10分。風味豊かで新鮮な地元の食材を使用しています。宴会の予約も受け付けております。', 5, '15:00:00', '22:00:00', 3500, 5000, 30, '059-0027', '北海道登別市青葉町X-XX-XX', '012-345-678');
-
-
--- holiday_typesテーブル
-INSERT IGNORE INTO holiday_types (id, name) VALUES (1, '定休日');
-INSERT IGNORE INTO holiday_types (id, name) VALUES (2, '祝祭日');
-INSERT IGNORE INTO holiday_types (id, name) VALUES (3, '臨時休業' );
-
-
--- holidaysテーブル
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (1, 1, 1, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (2, 2, 2, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (3, 3, 1, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (4, 4, 2, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (5, 4, 5, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (6, 5, 6, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (7, 5, 4, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (8, 6, 0, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (9, 7, 4, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (10, 8, 3, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (11, 9, 1, 1, NULL);
-INSERT IGNORE INTO holidays (id, restaurant_id, day_of_week_id, holiday_type_id, specific_date) VALUES (12, 9, 5, 1, NULL);
-
-
--- gendersテーブル
-INSERT IGNORE INTO genders (id, name) VALUES (1, '男性');
-INSERT IGNORE INTO genders (id, name) VALUES (2, '女性');
-
-
--- occupationsテーブル
-INSERT IGNORE INTO occupations (id, name) VALUES (1, '会社員');
-INSERT IGNORE INTO occupations (id, name) VALUES (2, '会社役員');
-INSERT IGNORE INTO occupations (id, name) VALUES (3, '学生');
-INSERT IGNORE INTO occupations (id, name) VALUES (4, '経営者');
-INSERT IGNORE INTO occupations (id, name) VALUES (5, '公務員');
-INSERT IGNORE INTO occupations (id, name) VALUES (6, '医療従事者');
-INSERT IGNORE INTO occupations (id, name) VALUES (7, '政治家');
-INSERT IGNORE INTO occupations (id, name) VALUES (8, '弁護士');
-INSERT IGNORE INTO occupations (id, name) VALUES (9, '自由業');
-INSERT IGNORE INTO occupations (id, name) VALUES (10, '自営業');
-INSERT IGNORE INTO occupations (id, name) VALUES (11, '個人事業主');
-INSERT IGNORE INTO occupations (id, name) VALUES (12, '派遣・契約社員');
-INSERT IGNORE INTO occupations (id, name) VALUES (13, 'パート・アルバイト');
-INSERT IGNORE INTO occupations (id, name) VALUES (14, '主婦(夫)');
-INSERT IGNORE INTO occupations (id, name) VALUES (15, '建築業');
-INSERT IGNORE INTO occupations (id, name) VALUES (16, '無職');
-
-
--- plan_typesテーブル
-INSERT IGNORE INTO plan_types (id, name, price_id) VALUES (1, 'フリー', NULL);
-INSERT IGNORE INTO plan_types (id, name, price_id) VALUES (2, 'ベーシック', NULL);
-
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (1, 'なごやそば名駅東口店', 'restaurant01.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 650, 15, '111-1111', '愛知県名古屋市中村区名駅通X-XX-XX', '012-345-678', '和食、カレー、焼肉', 'なし', '6:00～21:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (2, 'NAGOYA Bird', 'restaurant02.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。',  2500, 50, '111-1112', '愛知県名古屋市東区田中町X-XX-XX', '012-345-678', '揚げ物、フランス料理', '火', '10:00～20:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (3, 'らーめん愛知 名古屋北店', 'restaurant03.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1300, 10, '111-1113', '愛知県名古屋市北区笹X-XX-XX', '012-345-678', 'ラーメン、焼肉', '木', '10:00～21:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (4, '味噌ラーメン MEI', 'restaurant04.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 600, 10, '111-1114', '愛知県名古屋市熱田区神宮町X-XX-XX', '012-345-678', 'ラーメン', '金、土', '10:00～21:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (5, '尾張三郎', 'restaurant05.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 5000, 8, '111-1115', '愛知県名古屋市西区阿部野X-XX-XX', '012-345-678', 'ラーメン', 'なし', '8:00～18:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (6, '家系ラーメン 鈴木屋', 'restaurant06.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1500, 5, '111-1116', '愛知県名古屋市西区佐々川X-XX-XX', '012-345-678', 'ラーメン、フランス料理、焼肉', '月', '8:30～17:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (7, '麵処名古屋', 'restaurant07.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 600, 5, '111-1117', '愛知県名古屋市北区山田X-XX-XX', '012-345-678', 'ラーメン、カレー', 'なし', '9:30～21:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (8, '割烹東海', 'restaurant08.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 3000, 25, '111-1118', '愛知県名古屋市中区岸X-XX-XX', '012-345-678', '和食', 'なし', '10:00～21:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (9, '天ぷら山田', 'restaurant09.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 2000, 50, '111-1119', '愛知県名古屋市昭和区坂本X-XX-XX', '012-345-678', '和食、寿司、カレー', 'なし', '12:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (10, 'あつたおでん', 'restaurant10.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1200, 20, '111-1120', '愛知県名古屋市熱田区岩崎X-XX-XX', '012-345-678', '和食、ハンバーグ', 'なし', '12:00～19:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (11, 'うどん屋大西', 'restaurant01.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 450, 65, '111-1121', '愛知県名古屋市千種区おわり野X-XX-XX', '012-345-678', 'うどん、寿司、焼肉', 'なし', '10:00～23:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (12, 'すする　南店', 'restaurant02.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 800, 100, '111-1122', '愛知県名古屋市昭和区餅山X-XX-XX', '012-345-678', 'うどん、ハンバーグ', 'なし', '10:30～20:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (13, 'うどん　吾郎', 'restaurant03.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1650, 30, '111-1123', '愛知県名古屋市港区倉庫街X-XX-XX', '012-345-678', 'うどん、鍋料理', 'なし', '12:30～23:45');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (14, '愛カレー名古屋本店', 'restaurant04.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1250, 40, '111-1124', '愛知県名古屋市千種区岩手X-XX-XX', '012-345-678', 'カレー、フランス料理、寿司', 'なし', '12:30～23:45');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (15, '餃子館', 'restaurant05.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 750, 100, '111-1125', '愛知県名古屋市南区大山通吉田X-XX-XX', '012-345-678', 'ラーメン、中華料理', '火、木', '9:00～23:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (16, '四川料理　心', 'restaurant06.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1000, 15, '111-1126', '愛知県名古屋市中川区大山川本X-XX-XX', '012-345-678', '喫茶店、中華料理', 'なし', '10:00～22:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (17, '中川', 'restaurant07.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1400, 10, '111-1127', '愛知県名古屋市中川区喫茶ストリートX-XX-XX', '012-345-678', '喫茶店、スイーツ', 'なし', '9:00～17:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (18, 'EastRoad', 'restaurant08.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 900, 20, '111-1128', '愛知県名古屋市東区烏丸X-XX-XX', '012-345-678', '喫茶店、ステーキ', '木、金', '9:00～17:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (19, 'キリマンジャロ', 'restaurant09.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 500, 46, '111-1129', '愛知県名古屋市南区大谷X-XX-XX', '012-345-678', '喫茶店、スイーツ、カレー', '月', '9:00～22:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (20, 'パフェ工房西田', 'restaurant10.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 940, 15, '111-1130', '愛知県名古屋市南区尾張X-XX-XX', '012-345-678', 'スイーツ', 'なし', '9:00～20:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (21, 'ガトーナゴヤ', 'restaurant01.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 500, 5, '111-1131', '愛知県名古屋市東区藤見町松本X-XX-XX', '012-345-678', 'スイーツ', '水', '10:00～18:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (22, 'やきとり屋MURATA', 'restaurant02.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 500, 12, '111-1132', '愛知県名古屋市中区岩田X-XX-XX', '012-345-678', '焼き鳥、揚げ物', '水、金', '10:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (23, 'キムチ一番　名城店', 'restaurant03.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1680, 40, '111-1133', '愛知県名古屋市熱田区鈴鹿X-XX-XX', '012-345-678', '韓国料理、スイーツ', '金', '10:00～18:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (24, 'プリズム', 'restaurant04.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 6800, 50, '111-1134', '愛知県名古屋市緑区武田X-XX-XX', '012-345-678', '韓国料理', '月、金', '12:00～23:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (26, '山椒', 'restaurant06.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 3820, 140, '111-1136', '愛知県名古屋市中区あぐり野X-XX-XX', '012-345-678', '焼き鳥、タイ料理', 'なし', '8:00～18:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (27, 'むらびと', 'restaurant07.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 6720, 90, '111-1137', '愛知県名古屋市名東区加賀美野中X-XX-XX', '012-345-678', '焼き鳥、フランス料理', 'なし', '10:00～23:45');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (28, '海鮮　なぎさの風', 'restaurant08.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 8720, 60, '111-1137', '愛知県名古屋市緑区青山X-XX-XX', '012-345-678', '海鮮料理、フランス料理', 'なし', '18:00～27:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (29, '塩名人', 'restaurant09.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 10000, 200, '111-1138', '愛知県名古屋市緑区塩野X-XX-XX', '012-345-678', '海鮮料理', 'なし', '15:00～24:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (30, 'キング', 'restaurant10.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 5000, 400, '111-1139', '愛知県名古屋市緑区武蔵境X-XX-XX', '012-345-678', '海鮮料理、タイ料理、喫茶店', '水', '8:00～13:50');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (31, 'クイーン', 'restaurant01.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 800, 320, '111-1140', '愛知県名古屋市緑区妃山X-XX-XX', '012-345-678', '海鮮料理、寿司、揚げ物', '火、木、土', '7:00～19:35');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (32, 'JACK', 'restaurant02.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 895, 8, '111-1141', '愛知県名古屋市港区王子X-XX-XX', '012-345-678', '海鮮料理、和食、鍋料理', '月、水、金', '10:00～20:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (33, 'Ace', 'restaurant03.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 800, 3, '111-1142', '愛知県名古屋市港区X-XX-XX', '012-345-678', '海鮮料理、和食、鍋料理', '月、水、金', '10:00～20:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (34, 'Tako家', 'restaurant04.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 900, 6, '111-1143', '愛知県名古屋市瑞穂区X-XX-XX', '012-345-678', 'たこ焼き、お好み焼き', '金', '9:00～15:20');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (35, '島田', 'restaurant05.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 1000, 10, '111-1144', '愛知県名古屋市瑞穂区X-XX-XX', '012-345-678', 'たこ焼き', '火、金', '9:00～15:20');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (36, '大阪大将', 'restaurant06.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 2000, 20, '111-1145', '愛知県名古屋市瑞穂区蛸X-XX-XX', '012-345-678', 'たこ焼き、揚げ物', '火、金', '9:00～15:20');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (37, 'ポーン', 'restaurant07.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 3000, 30, '111-1146', '愛知県名古屋市瑞穂区X-XX-XX', '012-345-678', 'お好み焼き', '日、月', '14:00～22:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (38, 'ルーク', 'restaurant08.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 4800, 6, '111-1147', '愛知県名古屋市緑区大山X-XX-XX', '012-345-678', 'お好み焼き、ラーメン、カレー', '日', '16:00～19:30');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (39, 'ピジョップ', 'restaurant09.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 5130, 19, '111-1148', '愛知県名古屋市中区鬼頭X-XX-XX', '012-345-678', 'お好み焼き、ハンバーグ', '木', '10:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (40, 'ナイト', 'restaurant10.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 6000, 35, '111-1149', '愛知県名古屋市中区中村X-XX-XX', '012-345-678', 'お好み焼き、中華料理、焼肉', '月、土', '11:00～22:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (41, 'アーサー', 'restaurant01.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 7000, 10, '111-1150', '愛知県名古屋市昭和区本田X-XX-XX', '012-345-678', '鍋料理', '水', '15:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (42, '銀閣', 'restaurant02.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 9000, 28, '111-1151', '愛知県名古屋市昭和区芹澤X-XX-XX', '012-345-678', '鍋料理、フランス料理', '水', '6:00～16:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (43, 'ゴールド', 'restaurant03.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 9690, 56, '111-1152', '愛知県名古屋市昭和区X-XX-XX', '012-345-678', '鍋料理', 'なし', '8:00～19:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (44, 'シルバー', 'restaurant04.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 10000, 6, '111-1153', '愛知県名古屋市北区X-XX-XX', '012-345-678', '鍋料理、喫茶店、ステーキ', 'なし', '10:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (45, 'レッド', 'restaurant05.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 500, 16, '111-1154', '愛知県名古屋市北区X-XX-XX', '012-345-678', 'パン、喫茶店', 'なし', '10:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (46, 'ブルー', 'restaurant06.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 240, 65, '111-1155', '愛知県名古屋市名東区X-XX-XX', '012-345-678', 'パン', 'なし', '13:00～20:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (47, 'グリーン', 'restaurant07.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 3970, 56, '111-1156', '愛知県名古屋市名東区X-XX-XX', '012-345-678', 'パン、ハンバーグ', '木', '15:00～20:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (48, 'イエロー', 'restaurant08.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 4690, 28, '111-1157', '愛知県名古屋市西区X-XX-XX', '012-345-678', 'パン', '月', '8:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (49, 'ブラック', 'restaurant09.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 6270, 4, '111-1158', '愛知県名古屋市南区X-XX-XX', '012-345-678', 'パン、タイ料理', '水', '6:00～24:00');
+INSERT IGNORE INTO restaurants (id, name, image_name, description, price, seats, postal_code, address, phone_number,category,regular_holiday,business_hours) VALUES (50, 'ホワイト', 'restaurant10.jpg', '名古屋が誇る名物料理。地元産食材を使用した料理を提供しています。', 6160, 4, '111-1159', '愛知県名古屋市南区X-XX-XX', '012-345-678', 'パン、鍋料理', '水', '10:00～24:00');
 
 -- rolesテーブル
-INSERT IGNORE INTO roles (id, name) VALUES (1, 'ROLE_GENERAL_FREE');
-INSERT IGNORE INTO roles (id, name) VALUES (2, 'ROLE_GENERAL_PAID');
-INSERT IGNORE INTO roles (id, name) VALUES (3, 'ROLE_OWNER_ADMIN');
-INSERT IGNORE INTO roles (id, name) VALUES (4, 'ROLE_OWNER_EDITER');
-INSERT IGNORE INTO roles (id, name) VALUES (5, 'ROLE_ADMIN');
-
+INSERT IGNORE INTO roles (id, name) VALUES (1, 'ROLE_GENERAL');
+INSERT IGNORE INTO roles (id, name) VALUES (2, 'ROLE_ADMIN');
+INSERT IGNORE INTO roles (id, name) VALUES (3, 'ROLE_PAY');
+INSERT IGNORE INTO roles (id, name) VALUES (4, 'ROLE‗ADMIN_PAY');
 
 -- usersテーブル
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (1, '侍 太郎', 'サムライ タロウ', '1', '3', '1', '101-0022', '東京都千代田区神田練塀町300番地', '090-1234-5678', 'taro.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (2, '侍 花子', 'サムライ ハナコ', '2', '2', '2', '101-0022', '東京都千代田区神田練塀町300番地', '090-1234-5678', 'hanako.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 5, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (3, '侍 義勝', 'サムライ ヨシカツ', '2','2','2', '638-0644', '奈良県五條市西吉野町湯川X-XX-XX', '090-1234-5678', 'yoshikatsu.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 2,true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (4, '侍 幸美', 'サムライ サチミ', '2', '5', '1', '342-0006', '埼玉県吉川市南広島X-XX-XX', '090-1234-5678', 'sachimi.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (5, '侍 雅', 'サムライ ミヤビ', '2', '1', '1', '527-0209', '滋賀県東近江市佐目町X-XX-XX', '090-1234-5678', 'miyabi.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (6, '侍 正保', 'サムライ マサヤス', '1', '10', '1', '989-1203', '宮城県柴田郡大河原町旭町X-XX-XX', '090-1234-5678', 'masayasu.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (7, '侍 真由美', 'サムライ マユミ', '2', '9', '1', '951-8015', '新潟県新潟市松岡町X-XX-XX', '090-1234-5678', 'mayumi.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (8, '侍 安民', 'サムライ ヤスタミ', '1', '11', '1', '241-0033', '神奈川県横浜市旭区今川町X-XX-XX', '090-1234-5678', 'yasutami.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (9, '侍 章緒', 'サムライ アキオ', '1', '12', '1', '739-2103', '広島県東広島市高屋町宮領X-XX-XX', '090-1234-5678', 'akio.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (10, '侍 祐子', 'サムライ ユウコ', '2', '13', '1', '601-0761', '京都府南丹市美山町高野X-XX-XX', '090-1234-5678', 'yuko.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (11, '侍 秋美', 'サムライ アキミ', '2', '14', '1', '606-8235', '京都府京都市左京区田中西春菜町X-XX-XX', '090-1234-5678', 'akimi.samurai@example.com', 'password', 1, true);
-INSERT IGNORE INTO users (id, name, furigana, gender_id, occupation_id, plan_type_id, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (12, '侍 信平', 'サムライ シンペイ', '1', '1', '1', '673-1324', '兵庫県加東市新定X-XX-XX', '090-1234-5678', 'shinpei.samurai@example.com', '$2a$10$2JNjTwZBwo7fprL2X4sv.OEKqxnVtsVQvuXDkI8xVGix.U3W5B7CO', 1, true);
-
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (1, '佐々木 太郎', 'ササキ タロウ', '101-0022', '東京都千代田区神田練塀町300番地', '090-1234-5678', 'taro.samurai@example.com', 'password', 1, true);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (2, '佐々木 花子', 'ササキ ハナコ', '101-0022', '東京都千代田区神田練塀町300番地', '090-1234-5678', 'hanako.samurai@example.com', 'password', 2, true);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (3, '佐々木 義勝', 'ササキ ヨシカツ', '638-0644', '奈良県五條市西吉野町湯川X-XX-XX', '090-1234-5678', 'yoshikatsu.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (4, '田中 幸美', 'タナカ サチミ', '342-0006', '埼玉県吉川市南広島X-XX-XX', '090-1234-5678', 'sachimi.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (5, '田中 雅', 'タナカ ミヤビ', '527-0209', '滋賀県東近江市佐目町X-XX-XX', '090-1234-5678', 'miyabi.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (6, '田中 正保', 'タナカ マサヤス', '989-1203', '宮城県柴田郡大河原町旭町X-XX-XX', '090-1234-5678', 'masayasu.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (7, '田中 真由美', 'タナカ マユミ', '951-8015', '新潟県新潟市松岡町X-XX-XX', '090-1234-5678', 'mayumi.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (8, '佐藤 安民', 'サトウ ヤスタミ', '241-0033', '神奈川県横浜市旭区今川町X-XX-XX', '090-1234-5678', 'yasutami.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (9, '佐藤 章緒', 'サトウ アキオ', '739-2103', '広島県東広島市高屋町宮領X-XX-XX', '090-1234-5678', 'akio.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (10, '佐藤 祐子', 'サトウ ユウコ', '601-0761', '京都府南丹市美山町高野X-XX-XX', '090-1234-5678', 'yuko.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (11, '佐藤 秋美', 'サトウ アキミ', '606-8235', '京都府京都市左京区田中西春菜町X-XX-XX', '090-1234-5678', 'akimi.samurai@example.com', 'password', 1, false);
+INSERT IGNORE INTO users (id, name, furigana, postal_code, address, phone_number, email, password, role_id, enabled) VALUES (12, '佐藤 信平', 'サトウ シンペイ', '673-1324', '兵庫県加東市新定X-XX-XX', '090-1234-5678', 'shinpei.samurai@example.com', 'password', 1, false);
 
 -- reservationsテーブル
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (1, 1, 9, '2023-04-01', '14:00:00', '16:00:00', 2);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (2, 2, 9, '2023-04-02', '15:00:00', '17:00:00', 3);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (3, 3, 9, '2023-04-03', '14:00:00', '16:00:00', 4);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (4, 4, 9, '2023-04-04', '15:00:00', '17:00:00', 1);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (5, 5, 9, '2023-04-05', '16:00:00', '17:00:00', 10);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (6, 6, 9, '2023-04-06', '14:00:00', '17:00:00', 8);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (7, 7, 9, '2023-04-07', '15:00:00', '17:00:00', 6);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (8, 8, 9, '2023-04-08', '16:00:00', '17:00:00', 3);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (9, 9, 9, '2023-04-09', '17:00:00', '19:00:00', 2);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (10, 10, 9, '2023-04-10', '18:00:00', '20:00:00', 4);
-INSERT IGNORE INTO reservations (id, restaurant_id, user_id, booking_date, start_time, end_time, number_of_people) VALUES (11, 11, 9, '2023-04-11', '19:00:00', '21:00:00', 5);
-
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (1, 1, 1, 2, '2024-01-01');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (2, 2, 1, 6, '2024-01-05');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (3, 3, 1, 4, '2024-03-16');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (4, 4, 1, 5, '2024-05-15');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (5, 5, 1, 6, '2024-02-01');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (6, 6, 1, 3, '2024-01-01');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (7, 7, 1, 1, '2024-01-02');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (8, 8, 1, 3, '2024-01-12');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (9, 9, 1, 2, '2024-08-25');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (10, 10, 1, 5, '2024-07-15');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (11, 11, 1, 6, '2024-01-01');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (12, 12, 1, 5, '2024-01-02');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (13, 13, 1, 3, '2024-02-12');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (14, 14, 1, 4, '2024-02-09');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (15, 15, 1, 5, '2024-05-08');
+INSERT IGNORE INTO reservations (id, restaurant_id, user_id, number_of_people, reservation_date) VALUES (16, 16, 1, 7, '2024-01-15');
 
 -- reviewsテーブル
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (1, 1, 9, 3, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (2, 2, 9, 4, '美味しかった。');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (3, 3, 9, 5, 'また行きたい。');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (4, 4, 9, 2, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (5, 5, 9, 3, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (6, 6, 9, 4, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (7, 7, 9, 5, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (8, 8, 9, 3, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (9, 9, 9, 4, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (10, 10, 9, 5, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (11, 11, 9, 4, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (12, 12, 9, 4, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (13, 1, 1, 5, '雰囲気がよかった');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (14, 1, 2, 2, 'アットホームでおかみさんが素敵です。');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (15, 1, 3, 4, '大将、良かったっす！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (16, 1, 4, 5, '美味しかったです！');
-INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, impression) VALUES (17, 1, 5, 4, '美味しかったです！');
-
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (1, 1, 1, 1, 'テスト');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (2, 1, 2, 2, 'テスト2');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (3, 1, 3, 3, 'テスト3');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (4, 1, 4, 4, 'テスト4');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (5, 1, 5, 5, 'テスト5');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (6, 1, 6, 1, 'テスト6');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (7, 1, 7, 2, 'テスト7');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (8, 1, 8, 3, 'テスト8');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (9, 1, 9, 4, 'テスト9');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (10, 1, 10, 5, 'テスト10');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (11, 1, 11, 1, 'テスト11');
+INSERT IGNORE INTO reviews (id, restaurant_id, user_id, score, content) VALUES (12, 1, 12, 2, 'テスト12');
 
 -- favoritesテーブル
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (1, 1, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (2, 2, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (3, 3, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (4, 4, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (5, 5, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (6, 6, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (7, 7, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (8, 8, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (9, 9, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (10, 10, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (11, 11, 9);
-INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (12, 12, 9);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (1, 1, 4);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (2, 2, 4);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (3, 4, 9);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (4, 8, 2);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (5, 5, 1);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (6, 6, 1);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (7, 7, 1);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (8, 8, 1);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (9, 9, 3);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (10, 10, 7);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (11, 11, 1);
+ INSERT IGNORE INTO favorites (id, restaurant_id, user_id) VALUES (12, 12, 1);

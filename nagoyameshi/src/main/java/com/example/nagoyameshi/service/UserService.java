@@ -1,11 +1,14 @@
 package com.example.nagoyameshi.service;
 
+import java.util.UUID;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.nagoyameshi.entity.Role;
 import com.example.nagoyameshi.entity.User;
+import com.example.nagoyameshi.form.ResetPasswordForm;
 import com.example.nagoyameshi.form.SignupForm;
 import com.example.nagoyameshi.form.UserEditForm;
 import com.example.nagoyameshi.repository.RoleRepository;
@@ -13,6 +16,7 @@ import com.example.nagoyameshi.repository.UserRepository;
 
 @Service
 public class UserService {
+
 	private final UserRepository userRepository;
 	private final RoleRepository roleRepository;
 	private final PasswordEncoder passwordEncoder;
@@ -55,47 +59,56 @@ public class UserService {
 		userRepository.save(user);
 	}
 
-	// メールアドレスが登録済みかどうかをチェックする
 	public boolean isEmailRegistered(String email) {
-		User user = userRepository.findUserByEmail(email);
-		return user != null;
+		return userRepository.findUserByEmail(email) != null;
 	}
 
-	// パスワードとパスワード（確認用）の入力値が一致するかどうかをチェックする
 	public boolean isSamePassword(String password, String passwordConfirmation) {
 		return password.equals(passwordConfirmation);
 	}
 
-	// ユーザーを有効にする
 	@Transactional
 	public void enableUser(User user) {
 		user.setEnabled(true);
 		userRepository.save(user);
 	}
 
-	// メールアドレスが変更されたかどうかをチェックする
 	public boolean isEmailChanged(UserEditForm userEditForm) {
 		User currentUser = userRepository.getReferenceById(userEditForm.getId());
 		return !userEditForm.getEmail().equals(currentUser.getEmail());
 	}
 
-	//UserRepositoryに取得したidを渡す
 	@Transactional
 	public void updatePaid(int id) {
 		User changepaiduser = userRepository.findUserById(id);
 		System.out.println("changepaiduser:" + changepaiduser);
 
-		//現在設定されている会員レベルの逆を設定：無料会員→有料会員　もしくは、その逆。
-		Role r = changepaiduser.getRole();
-		String role = r.getName();
-		Role newRole = new Role();
-		if (r.getId() == 1) {
-			newRole.setId(3);
-		} else {
-			newRole.setId(1);
-		}
-		changepaiduser.setRole(newRole);
+		Role currentRole = changepaiduser.getRole();
+		int newRoleId = (currentRole.getId() == 1) ? 3 : 1;
+		changepaiduser.setRole(roleRepository.findById(newRoleId));
+
+		UUID uuid = UUID.randomUUID();
+		changepaiduser.setReferenceId(uuid.toString());
 
 		userRepository.save(changepaiduser);
+	}
+
+	@Transactional
+	public void updatePassword(ResetPasswordForm resetPasswordForm) {
+		User user = userRepository.getReferenceById(resetPasswordForm.getId());
+		user.setPassword(passwordEncoder.encode(resetPasswordForm.getPassword()));
+		userRepository.save(user);
+	}
+
+	public String startSubscription(Long userId) {
+		return "https://buy.stripe.com/test_5kA5l1ezX9eX8P68ww";
+	}
+
+	public String generateReferenceId() {
+		return UUID.randomUUID().toString();
+	}
+
+	public User findUserByEmail(String email) {
+		return userRepository.findUserByEmail(email);
 	}
 }

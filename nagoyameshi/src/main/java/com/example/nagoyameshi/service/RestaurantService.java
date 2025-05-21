@@ -16,7 +16,7 @@ import com.example.nagoyameshi.form.RestaurantRegisterForm;
 import com.example.nagoyameshi.repository.RestaurantRepository;
 
 @Service
-public class RestaurantService {
+public class RestaurantService {	
 	private final RestaurantRepository restaurantRepository;
 
 	public RestaurantService(RestaurantRepository restaurantRepository) {
@@ -95,4 +95,5 @@ public class RestaurantService {
 			e.printStackTrace();
 		}
 	}
+
 }

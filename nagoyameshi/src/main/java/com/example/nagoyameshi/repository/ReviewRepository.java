@@ -13,7 +13,7 @@ import com.example.nagoyameshi.entity.User;
 //参考にしたQA:https://terakoya.sejuku.net/question/detail/33847
 
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
-	
+
 	//投稿されたレビューを投稿された順に並べて、最新の6件のレビューを取得する。
 	public List<Review> findTop6ByRestaurantOrderByCreatedAtDesc(Restaurant restaurant);
 

@@ -7,11 +7,11 @@ import com.example.nagoyameshi.entity.User;
 import lombok.Getter;
 
 @Getter
-public class SignupEvent extends ApplicationEvent {
+public class ResetEvent extends ApplicationEvent {
 	private User user;
 	private String requestUrl;
 
-	public SignupEvent(Object source, User user, String requestUrl) {
+	public ResetEvent(Object source, User user, String requestUrl) {
 		super(source);
 
 		this.user = user;

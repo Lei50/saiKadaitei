@@ -8,6 +8,7 @@ import com.example.nagoyameshi.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 	public User findUserByEmail(String email);
+
 	//idを指定してuserを取得する
 	public User findUserById(int id);
 

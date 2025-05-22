@@ -5,9 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.nagoyameshi.entity.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Integer> {
-	public Role findByName(String name);
+	public Role findByName(String name);  	
 	
-	//idを指定してuserを取得する
-		public Role findById(int id);
-
 }

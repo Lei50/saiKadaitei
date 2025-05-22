@@ -8,63 +8,82 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
 import lombok.Data;
 
 @Entity
 @Table(name = "restaurants")
 @Data
 public class Restaurant {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+    
+	@ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category; 
+    
+    @Column(name = "name")
+    private String name;
 
-	@Column(name = "name")
-	private String name;
+    @Column(name = "image_name")
+    private String imageName;
 
-	@Column(name = "image_name")
-	private String imageName;
+    @Column(name = "description")
+    private String description;
 
-	@Column(name = "description")
-	private String description;
+    @Column(name = "price_low")
+    private Integer priceLow;
+    
+    @Column(name = "price_high")
+    private Integer priceHigh;
 
-	@Column(name = "price")
-	private Integer price;
+    @Column(name = "address")
+    private String address;
 
-	@Column(name = "seats")
-	private Integer seats;
+    @Column(name = "open_at")
+    private LocalTime openAt;
+    
+    @Column(name = "close_at")
+    private LocalTime closeAt;
 
-	@Column(name = "postal_code")
-	private String postalCode;
+    @Column(name = "closed_on")
+    private String closedOn;
 
-	@Column(name = "address")
-	private String address;
+    @Column(name = "capacity")
+    private Integer capacity;
 
-	@Column(name = "phone_number")
-	private String phoneNumber;
+    @Column(name = "created_at", insertable = false, updatable = false)
+    private Timestamp createdAt;
 
-	@Column(name = "category")
-	private String category;
+    @Column(name = "updated_at", insertable = false, updatable = false)
+    private Timestamp updatedAt;
+            
+    // Getters and setters for openAt and closeAt
+    public LocalTime getOpenAt() {
+        return openAt;
+    }
 
-	@Column(name = "regular_holiday")
-	private String regularHoliday;
+    public void setOpenAt(LocalTime openAt) {
+        this.openAt = openAt;
+    }
 
-	@Column(name = "business_hours")
-	private String businessHours;
+    public LocalTime getCloseAt() {
+        return closeAt;
+    }
 
-	@Column(name = "created_at", insertable = false, updatable = false)
-	private Timestamp createdAt;
-
-	@Column(name = "updated_at", insertable = false, updatable = false)
-	private Timestamp updatedAt;
-
-	public LocalTime getOpeningTime() {
-		return null;
-	}
-
-	public LocalTime getClosingTime() {
-		return null;
-	}
-
+    public void setCloseAt(LocalTime closeAt) {
+        this.closeAt = closeAt;
+    }
+    
+ // カテゴリ名を取得するメソッドを追加
+    public String getCategoryName() {
+        return category != null ? category.getName() : null;
+    }
+    
 }

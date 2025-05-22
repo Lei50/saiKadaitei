@@ -1,9 +1,11 @@
 let maxDate = new Date();
- maxDate = maxDate.setMonth(maxDate.getMonth() + 3);
+ maxDate = maxDate.setMonth(maxDate.getMonth() + 1);
+ 
+ let minDate = new Date();
+ minDate.setDate(minDate.getDate() + 1);
  
  flatpickr('#reservationDate', {
-  mode: "single",
-  locale: 'ja',
-  minDate: 'today',
-  maxDate: maxDate
-});
+   locale: 'ja',
+   minDate: minDate,
+   maxDate: maxDate
+ });

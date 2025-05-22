@@ -8,35 +8,31 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.nagoyameshi.entity.Restaurant;
 
-
 public interface RestaurantRepository extends JpaRepository<Restaurant, Integer> {
-	public Page<Restaurant> findByNameLike(String keyword, Pageable pageable);
-
-	//店舗名または目的地で検索する（新着順）
-	public Page<Restaurant> findByNameLikeOrAddressLikeOrderByCreatedAtDesc(String nameKeyword, String addressKeyword,
-			Pageable pageable);
-
-	//店舗名または目的地で検索する（料金が安い順）
-	public Page<Restaurant> findByNameLikeOrAddressLikeOrderByPriceAsc(String nameKeyword, String addressKeyword,
-			Pageable pageable);
-
-	//カテゴリで検索する（新着順）
-	public Page<Restaurant> findByCategoryLikeOrderByCreatedAtDesc(String category, Pageable pageable);
-
-	//カテゴリで検索する（料金が安い順）
-	public Page<Restaurant> findByCategoryLikeOrderByPriceAsc(String category, Pageable pageable);
-
-	//予算で検索する（新着順）
-	public Page<Restaurant> findByPriceLessThanEqualOrderByCreatedAtDesc(Integer price, Pageable pageable);
-
-	//予算で検索する（料金が安い順）
-	public Page<Restaurant> findByPriceLessThanEqualOrderByPriceAsc(Integer price, Pageable pageable);
-
-	//すべてのデータを取得する（新着順）
-	public Page<Restaurant> findAllByOrderByCreatedAtDesc(Pageable pageable);
-
-	//すべてのデータを取得する（料金が安い順）
-	public Page<Restaurant> findAllByOrderByPriceAsc(Pageable pageable);
-
-	public List<Restaurant> findTop10ByOrderByCreatedAtDesc();
+	public Restaurant findRestaurantById(Integer id);
+	Page<Restaurant> findByNameLike(String keyword, Pageable pageable);
+	Page<Restaurant> findByNameLikeOrderByCreatedAtDesc(String keyword, Pageable pageable);
+	Page<Restaurant> findByNameLikeOrderByPriceLowAsc(String keyword, Pageable pageable);
+	Page<Restaurant> findByNameLikeOrderByPriceHighDesc(String keyword, Pageable pageable);
+	
+	Page<Restaurant> findByNameLikeOrCategory_NameLike(String keyword, String categoryName,Pageable pageable);
+	
+	Page<Restaurant> findByCategory_NameLike(String categoryName, Pageable pageable);
+	Page<Restaurant> findByCategory_NameLikeOrderByCreatedAtDesc(String categoryName, Pageable pageable);
+	Page<Restaurant> findByCategory_NameLikeOrderByPriceLowAsc(String categoryName, Pageable pageable);
+	Page<Restaurant> findByCategory_NameLikeOrderByPriceHighDesc(String categoryName, Pageable pageable);
+	
+	Page<Restaurant> findByPriceHighLessThanEqualOrderByCreatedAtDesc(Integer priceHigh, Pageable pageable);
+	Page<Restaurant> findByPriceHighLessThanEqualOrderByPriceLowAsc(Integer priceHigh, Pageable pageable);
+	Page<Restaurant> findByPriceHighLessThanEqualOrderByPriceHighDesc(Integer priceHigh, Pageable pageable);
+	   
+	   
+	Page<Restaurant> findAllByOrderByCreatedAtDesc(Pageable pageable);
+    Page<Restaurant> findAllByOrderByPriceLowAsc(Pageable pageable); 
+    Page<Restaurant> findAllByOrderByPriceHighDesc(Pageable pageable); 
+    				
+    List<Restaurant> findTop5ByOrderByCreatedAtDesc();
+	
+	List<Restaurant> findByNameContaining(String keyword);	
+      
 }
